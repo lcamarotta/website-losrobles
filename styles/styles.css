@@ -1,0 +1,71 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Gantari', sans-serif;
+}
+
+.displayInline{
+  display: inline-block;
+}
+
+body{
+ background-color: #ecebe1;
+}
+
+footer{
+  background-image: url(../images/wood_texture.webp);
+}
+
+.navBar{
+  display: block;
+  background-image: url(../images/wood_texture.webp);
+}
+
+.navBar a{
+  text-decoration: none;
+  color: #2c3639;
+}
+
+.navBar div{
+  margin: 20px 400px 0px 20px;
+  font-size: 20px;
+}
+
+.navBar li{
+  display: inline-block;
+  margin: 15px;
+  padding: 8px;
+  background-color: #ece5c7;
+  border-top:solid 7px #2c3639;
+  border-right:solid 7px #3f4e4f;
+  border-bottom:solid 7px #a28b5c;
+  border-left:solid 7px #dcd7c9;
+  font-size: large;
+  text-transform: uppercase;
+}
+
+h2{
+  margin: 20px 0 20px 10px;
+  color: #2c3639;
+}
+
+h3{
+  margin: 20px 0 20px 10px;
+  color: #2c3639
+}
+
+main section{
+  margin: 25px 0 25px 10px;
+}
+
+main section p{
+  display: inline-block;
+  width: 500px;
+  margin: 0 10px 10px 20px;
+  color: #3f4e4f;
+  text-align: justify;
+}
+
+main section img{
+  border-radius: 15px;
+}
