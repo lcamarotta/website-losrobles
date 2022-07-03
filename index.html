@@ -1,68 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">	
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Los Robles - Home</title>
-  <link rel="shortcut icon" href="./images/faviconLR.ico">
-  <link rel="stylesheet" href="./styles/styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,300;0,500;0,600;1,100&display=swap" rel="stylesheet"> 
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Los Robles - Home</title>
+		<link rel="shortcut icon" href="./images/faviconLR.ico">
+		<link rel="stylesheet" href="./styles/styles.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,300;0,500;0,600;1,100&display=swap" rel="stylesheet"> 
+	</head>
 
-<body>
-  <header id="top">
-    <div class="navBar">
-      <div class="displayInline">
-        <a href="./index.html"><h1 class="displayInline">Los Robles</h1></a>
-      </div>
-      <nav class="displayInline">
-        <ul class="displayInline">
-          <li>
-            <a href="./sections/galery.html">Galeria</a>
-          </li>
-          <li>
-            <a href="./sections/shop.html">Comprar</a>
-          </li>
-          <li>
-            <a href="./sections/about.html">Acerca de nosotros</a>
-          </li>
-          <li>
-            <a href="./sections/contact.html">Contacto</a>
-          </li>
-        </ul>
-      </nav>
-     </div>
-  </header>
-  <main>
-    <h2>Tablas Artesanales</h2>
-    <section>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis nulla dolorum odio sint, ipsam similique dolor qui, ut laudantium aliquam omnis deserunt quasi voluptates totam reprehenderit tempora nisi repellendus neque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nostrum et asperiores, perspiciatis omnis minus quis facere, veniam commodi dolore delectus neque. Quo quibusdam iure consequuntur rerum, esse quidem mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quam quisquam illo, nesciunt cumque voluptas? Eos iste voluptatum, qui quas veniam, magni cupiditate quo beatae cumque ea adipisci rerum ad.</p>
-      <img src="./images/img_0.png" width=130px height=210px alt="imagen de emprendedor">
-    </section>
+	<body>
+		<header id="header">
+			<!-- quitar luego al usar flex o grid-->
+			<div class="navLogo">
+				<a href="../index.html"><h1>Los Robles</h1></a>
+			</div>
+			<!-- ------------ -->
+			<nav class="navBar">
+				<ul>
+					<li>
+						<a href="./sections/shop.html">Comprar</a>
+					</li>
+					<li>
+						<a href="./sections/galery.html">Galeria</a>
+					</li>
+					<li>
+						<a href="./sections/about.html">Nosotros</a>
+					</li>
+					<li>
+						<a href="./sections/contact.html">Contacto</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
 
-    <section>
-     <h3>Nuestras Tablas</h3>
-     <img src="./images/img_1.jpg" width="200px" height="200px" alt="imagen de producto">
-      <img src="./images/img_2.jpg" width="200px" height="200px" alt="imagen de producto">
-      <img src="./images/img_3.jpg" width="200px" height="200px" alt="imagen de producto">
-    </section>
+		<main class="mainHome">
+			<!--no pude hacer que quede bien solo con box-modeling
+			<div class="navLogo_home">
+				<a href="./index.html"><h1>Los Robles</h1></a>
+			</div>
+			<section>
+				<img src="./images/img_3.jpg" width="200px" height="200px" alt="imagen de producto">
+			----------agregar luego al usar flex o grid-->
+			</section>
+			<section>
+				<h2>Tablas Artesanales</h2>
+				<p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis nulla dolorum odio sint, ipsam similique dolor qui, ut laudantium aliquam omnis deserunt quasi voluptates totam reprehenderit tempora nisi repellendus neque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nostrum et asperiores, perspiciatis omnis minus quis facere, veniam commodi dolore delectus neque. Quo quibusdam iure consequuntur rerum, esse quidem mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quam quisquam illo, nesciunt cumque voluptas? Eos iste voluptatum, qui quas veniam, magni cupiditate quo beatae cumque ea adipisci rerum ad.</p>
+				<img src="./images/img_0.png" width=130px height=210px alt="imagen de emprendedor">
+			</section>
+			<section>
+				<h3>Tablas Destacadas</h3>
+				<img src="./images/img_1.jpg" width="200px" height="200px" alt="imagen de producto">
+				<img src="./images/img_2.jpg" width="200px" height="200px" alt="imagen de producto">
+				<img src="./images/img_3.jpg" width="200px" height="200px" alt="imagen de producto">
+			</section>
+		</main>
 
-    <section>
-      <h3>¿Como se hacen?</h3>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/j4yatuDmUyc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </section>
-  </main>
-
-  <footer>
-    <a href="#top">Subir</a>
-    <br>
-    <a href="https://www.facebook.com/losrobles.gr/" target="_blank"><img src="./images/faceLogo.png" alt="link to facebook"></a>
-    <a href="https://www.instagram.com/losroblesgr/?hl=es" target="_blank"><img src="./images/instaLogo.png" alt="link to instragram"></a>
-    <a href="https://www.whatsapp.com" target="_blank"><img src="./images/wppLogo.png" alt="link to whatsapp"></a>
-  </footer>
-</body>
+		<footer>
+			<div>
+				<p>Contador de visitas ~~~</p>
+			</div>
+			<div>
+				<a href="#header">Subir</a>
+				<p>© Todos los derechos reservados.</p>
+			</div>
+			<div>
+				<a href="https://www.facebook.com/losrobles.gr/" target="_blank"><img src="./images/faceLogo.png" alt="link to facebook"></a>
+				<a href="https://www.instagram.com/losroblesgr/?hl=es" target="_blank"><img src="./images/instaLogo.png" alt="link to instragram"></a>
+				<a href="https://www.whatsapp.com" target="_blank"><img src="./images/wppLogo.png" alt="link to whatsapp"></a>
+			</div>
+		</footer>
+	</body>
 </html>
