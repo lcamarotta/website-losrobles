@@ -2,38 +2,37 @@
   margin: 0;
   padding: 0;
   font-family: 'Gantari', sans-serif;
-  border: 1px solid black;
 }
 
 body{
- background-color: #fcdec08f;
+ background-color: #ecebe1;
 }
 
-header{
-  display: flex;
-  justify-content: space-between;
+#header{
+  display: block;
   background-image: url(../images/wood_texture.webp);
 }
 
-.navBar ul{
-  display: flex;
-  justify-content:center;
-  align-items: center;
-}
-
-.navLogo,
-.navLogo h1,
-.navBar a{
+#header a{
   text-decoration: none;
   color: #2c3639;
+}
+
+.navLogo{
+  display: inline-block;
+  margin-left: 15px;
+  font-size: 20px;
   font-variant: small-caps;
-  border:none;
+}
+
+.navBar{
+  display: inline-block;
+  margin-left: 150px;
 }
 
 .navBar li{
-  display: flex;
-  margin: 30px 25px;
-  padding: 5px 15px;
+  display: inline-block;
+  margin: 15px;
   background-color: #ece5c7;
   border-radius: 6px;
   border-top:solid 7px #2c3639;
@@ -41,9 +40,9 @@ header{
   border-bottom:solid 7px #a28b5c;
   border-left:solid 7px #dcd7c9;
   font-size: large;
-  /*text-transform: uppercase;*/
+  text-transform: uppercase;
 }
-/*
+
 .navBar li a{
   display: block;
   padding: 10px;
@@ -164,4 +163,3 @@ header{
 footer{
   background-image: url(../images/wood_texture.webp);
 }
-*/
