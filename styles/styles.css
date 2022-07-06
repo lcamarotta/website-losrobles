@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Gantari', sans-serif;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
 }
 
 body{
@@ -10,39 +10,92 @@ body{
 }
 
 header{
+  position: fixed;
+  width: 100vw;
+  background-image: url(../images/img_11.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.navBarContainer{
   display: flex;
+  margin: 0 6%;
+  width: 88%;
+  height: 90px;
   justify-content: space-between;
-  background-image: url(../images/wood_texture.webp);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navBar{
+  width: 25%;
 }
 
 .navBar ul{
   display: flex;
-  justify-content:center;
-  align-items: center;
-}
-
-.navLogo,
-.navLogo h1,
-.navBar a{
-  text-decoration: none;
-  color: #2c3639;
-  font-variant: small-caps;
-  border:none;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .navBar li{
   display: flex;
-  margin: 30px 25px;
-  padding: 5px 15px;
-  background-color: #ece5c7;
+  padding: 5px 10px;
+  /*background-color: #ece5c7;*/
+  background-color: #756a5c;
   border-radius: 6px;
   border-top:solid 7px #2c3639;
-  border-right:solid 7px #3f4e4f;
+  /*border-right:solid 7px #3f4e4f;*/
+  border-right:solid 7px #485758;
   border-bottom:solid 7px #a28b5c;
   border-left:solid 7px #dcd7c9;
   font-size: large;
-  /*text-transform: uppercase;*/
 }
+
+.navBar a{
+  text-decoration: none;
+  /*color: #2c3639;*/
+  color: #f9ffed;
+  font-variant: small-caps;
+}
+
+.navLogo,
+.navLogo h1{
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  text-decoration: none;
+  color: #2c3639;
+  font-variant: small-caps;
+}
+
+.navLogo_homepage{
+  position: sticky;
+  top: 10px;
+  color: #f9ffed;
+  text-decoration: none;
+}
+
+.navLogo_homepage h1{
+  font-family: 'Great Vibes', cursive;
+  font-size: 60px;
+}
+
+.section1_home{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../images/img_10.jpg);
+  background-position: center;
+  background-size: cover;
+
+}
+
+.section2_home{
+  height: 50vh;
+}
+
 /*
 .navBar li a{
   display: block;
