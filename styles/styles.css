@@ -2,46 +2,56 @@
   margin: 0;
   padding: 0;
   font-family: 'Gantari', sans-serif;
-  border: 1px solid black;
+  order: 1px solid black;
 }
 
 body{
- background-color: #fcdec08f;
+  background-color: #fcdec08f;
 }
 
+/* -------- navBar -------- */
 header{
-  position: fixed;
-  width: 100vw;
+  position: sticky;
+  top: 0;
   background-image: url(../images/img_11.jpg);
   background-position: center;
   background-size: cover;
+  z-index: 1;
 }
 
-.navBarContainer{
-  display: flex;
-  margin: 0 6%;
-  width: 88%;
-  height: 90px;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+.navBarLink1{
+  grid-area: l1;
+}
+
+.navBarLink2{
+  grid-area: l2;
+}
+
+.navBarLink3{
+  grid-area: l3;
+}
+
+.navBarLink4{
+  grid-area: l4;
 }
 
 .navBar{
-  width: 25%;
-}
-
-.navBar ul{
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  display: grid;
+  width: 100%;
+  height: 13vh;
+  grid-template-areas:
+    "l1 l2 l3 l4";
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .navBar li{
   display: flex;
-  padding: 4px 8px;
-  width: 80px;
-  height: 22px;
+  height: fit-content;
+  justify-content: center;
+  margin-top: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
   /*background-color: #ece5c7;*/
   background-color: #756a5c;
   border-radius: 6px;
@@ -50,7 +60,7 @@ header{
   border-right:solid 7px #485758;
   border-bottom:solid 7px #a28b5c;
   border-left:solid 7px #dcd7c9;
-  font-size: large;
+  font-size: medium;
 }
 
 .navBar a{
@@ -59,187 +69,87 @@ header{
   color: #f9ffed;
   font-variant: small-caps;
 }
+/* -------- --- -------- */
 
-.navLogo,
-.navLogo h1{
+/* -------- main -------- */
+.homepage{
   display: flex;
-  align-self: center;
-  justify-self: center;
-  text-decoration: none;
-  color: #2c3639;
-  font-variant: small-caps;
+  flex-direction: column;
 }
 
-.navLogo_homepage{
+.homepageLogo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: sticky;
-  top: 10px;
+  top: -28vh;
+  background-color: black;
+  z-index: 2;
+}
+
+.homepageLogo a{
+  position: absolute;
+  top: 35vh;
   color: #f9ffed;
   text-decoration: none;
 }
 
-.navLogo_homepage h1{
+.homepageLogo a h1{
   font-family: 'Great Vibes', cursive;
-  font-size: 60px;
 }
 
 .section1_home{
+  width: 100%;
+  height: 87vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 50vh;
-  /*width: 100vw;*/
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../images/img_10.jpg);
   background-position: center;
   background-size: cover;
+}
 
+.section1_home p{
+  position: relative;
+  top: 42vh;
+  color: #f9ffed;
+  font-size: 22px;
 }
 
 .section2_home{
-  height: vh;
 }
 
-footer, .footer_right, .footer_right a{
+.section3_home{
+}
+/* -------- --- -------- */
+
+/* -------- footer -------- */
+/*footer{
+  background-image: url(../images/img_11.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+footer, .footer_right{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .footer_left, .footer_right{
-  width: 15%;
+  margin: 10px;
+  width: 8%;
   align-self: flex-end;
 }
 
 .footer_center{
+  margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .footer_center a img, .footer_right a img{
-  margin: 6px;
   width: 40px;
   height: 40px;
 }
-
-/*
-.navBar li a{
-  display: block;
-  padding: 10px;
-  font-weight: bolder;
-}
-
-.mainHome h2{
-  margin: 20px 0 20px 10px;
-  color: #2c3639;
-}
-
-.mainHome h3{
-  margin: 20px 0 20px 10px;
-  color: #2c3639
-}
-
-.mainHome section{
-  margin: 25px 0 25px 10px;
-}
-
-.text{
-  display: inline-block;
-  width: 500px;
-  margin: 0 10px 10px 20px;
-  color: #3f4e4f;
-  text-align: justify;
-}
-
-.mainHome section img{
-  border-radius: 15px;
-}
-
-.mainGalery h2{
-  margin: 10px;
-  text-align: center;
-  font-weight: bolder;
-  font-size: 30px;
-}
-
-.imgGalery{
-  margin: 5px;
-  padding: 5px;
-}
-
-.imgGalery img{
-  margin: 10px;
-  border-style: solid;
-  border-style: double;
-  border-width: 4px;
-  border-radius: 30px;
-}
-
-.mainShop h2{
-  margin: 25px 0 0 15px;
-  text-align: center;
-  font-weight: bolder;
-  font-size: 30px;
-}
-
-.onSale{
-  display: inline-block;
-  margin: 25px;
-  padding: 15px 15px 5px 15px;
-  background-color: #a28b5c36;
-  border-radius: 10px;
-}
-
-.onSaleDescription{
-  text-align: center;
-  margin: 10px 0;
-}
-
-.onSaleDescription p{
-  margin-bottom: 8px;
-}
-
-.onSaleDescription a{
-  display: inline-block;
-  margin: 15px 0 0 0;
-  padding: 4px 18px;
-  border-color: #606969;
-  border-width: 6px;
-  border-style: outset;
-  border-radius: 12px;
-  background-color: #3f4e4f;
-  text-decoration: none;
-  color: azure;
-  font-size: 17px;
-  font-weight: bolder;
-}
-
-.mainAbout h2{
-  margin: 10px;
-  padding: 10px;
-
-}
-
-.mainAbout img{
-  border-radius: 20px;
-}
-
-.mainAbout section{
-  margin-bottom: 30px;
-}
-
-.mainContact h2{
-  margin: 15px 0 20px 15px;
-}
-
-.mainContact form{
-  margin: 0 0 300px 25px;
-}
-
-.mainContact div{
-  margin: 20px 0;
-}
-
-footer{
-  background-image: url(../images/wood_texture.webp);
-}
-*/
+/* -------- --- -------- */
