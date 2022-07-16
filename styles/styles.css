@@ -13,9 +13,9 @@ body{
 header{
   position: sticky;
   top: 0;
-  background-image: url(../images/img_11.jpg);
+  background-image: url(../images/img_12.jpg);
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   z-index: 1;
 }
 
@@ -75,7 +75,7 @@ header{
   flex-direction: column;
   align-items: center;
   position: sticky;
-  top: -34vh;
+  top: -33vh;
   background-color: black;
   z-index: 2;
 }
@@ -122,6 +122,9 @@ header{
 
 .section3_home{
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 /* -------- --- -------- */
 
@@ -163,6 +166,7 @@ header{
 
 footer{
   display: grid;
+  color: #f9ffed;
   grid-template-areas: 
     "fTop fTop fTop"
     "fFacebook fInstagram fWhatsApp"
@@ -170,17 +174,11 @@ footer{
   grid-template-columns: 2fr 1fr 2fr;
   grid-template-rows: 2fr 1fr 1fr;
   background-image: url(../images/img_11.jpg);
-  background-position: center;
-  background-size: cover;
+  background-size: contain;
 }
 
 footer img{
   width: 30px;
   height: 30px;
-}
-
-.footerTop img{
-  width: 25px;
-  height: 25px;
 }
 /* -------- --- -------- */
