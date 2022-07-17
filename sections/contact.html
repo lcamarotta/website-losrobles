@@ -5,91 +5,86 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Los Robles - Contacto</title>
+		<title>Los Robles - Shop</title>
 		<link rel="shortcut icon" href="../images/faviconLR.ico">
 		<link rel="stylesheet" href="../styles/styles.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,300;0,500;0,600;1,100&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,300;0,500;0,600;1,100&family=Great+Vibes&display=swap" rel="stylesheet"> 
 	</head>
 
-	<body>
-		<header id="header">
-			<div class="navLogo">
-				<a href="../index.html"><h1>Los Robles</h1></a>
-			</div>
-			<nav class="navBar">
-				<ul>
-					<li>
-						<a href="./shop.html">Comprar</a>
-					</li>
-					<li>
-						<a href="./galery.html">Galeria</a>
-					</li>
-					<li>
-						<a href="./about.html">Nosotros</a>
-					</li>
-					<li>
-						<a href="./contact.html">Contacto</a>
-					</li>
+	<body id="top">
+		<header> 
+			<nav>
+				<ul class="navBar">
+					<li class="navBarLogo"><a href="../index.html"><h1>Los Robles</h1></a></li>
+					<li class="navBarLink1"><a href="./shop.html">Comprar</a></li>
+					<li class="navBarLink2"><a href="./galery.html">Galeria</a></li>
+					<li class="navBarLink3"><a href="./about.html">Nosotros</a></li>
+					<li class="navBarLink4"><a href="./contact.html">Contacto</a></li>	
 				</ul>
 			</nav>
 		</header>
 
 		<main class="mainContact">
-			<h2>Dejanos tu informacion para que podamos contactarte:</h2>
-			<form action="#">
-				<div>
-					<label for="name">Tu nombre:</label>
-					<input id="name" type="text" name="name" placeholder="Nombre">
-				</div>
-				<div>
-					<label for="phone">Tu telefono:</label>
-					<input id="phone" type="text" name="phone" placeholder="Nombre">
-				</div>
-				<div>
-					<label for="email">Tu email:</label>
-					<input id="email" type="email" name="email" placeholder="tu@email.com">
-				</div>
-				<div>
-					<label for="comment">Comentarios:</label>
-					<textarea id="comment" name="comment"></textarea>
-				</div>
-				<div>
-					<label for="puntaje">¿Como puntuarias mi trabajo?</label>
-					<select name="puntaje" id="puntaje"> 
-						<option value="">--Elija un numero--</option>
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4</option>
-						<option value="5">5</option>
-						<option value="6">6</option>
-						<option value="7">7</option>
-						<option value="8">8</option>
-						<option value="9">9</option>
-						<option value="10">10</option>
-					</select>
-				</div>
-				<div>
-					<input type="submit" value="Enviar">
-					<input type="reset" value="Limpiar">
-				</div>
-			</form>
+			<div class="contactForm_container">
+				<h2 class="subtitle">Deja tus datos para que podamos contactarte</h2>
+				<form class="contactForm" action="#">
+					<div class="contact_div1">
+						<label for="name">Tu nombre</label>
+						<input id="name" type="text" name="name" placeholder="Nombre">
+					</div>
+					<div class="contact_div1">
+						<label for="phone">Tu telefono</label>
+						<input id="phone" type="text" name="phone" placeholder="Nombre">
+					</div>
+					<div class="contact_div1">
+						<label for="email">Tu email</label>
+						<input id="email" type="email" name="email" placeholder="tu@email.com">
+					</div>
+					<div class="contact_div1">
+						<label for="comment">Comentarios</label>
+						<textarea id="comment" name="comment"></textarea>
+					</div>
+					<div class="contact_div2">
+						<label for="puntaje">¿Como puntuarias mi trabajo?</label>
+						<select name="puntaje" id="puntaje"> 
+							<option value="">--Elija un numero--</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</select>
+					</div>
+					<div>
+						<input type="submit" value="Enviar">
+						<input type="reset" value="Limpiar">
+					</div>
+				</form>	
+			</div>
 		</main>
 
 		<footer>
-			<div>
-				<p>Contador de visitas ~~~</p>
-			</div>
-			<div>
-				<a href="#header">Subir</a>
+			<div class="footerText">
 				<p>© Todos los derechos reservados.</p>
 			</div>
-			<div>
+			<div class="footerTop">
+				<a href="#top"><img src="../images/up-arrow.png"></a>
+			</div>
+			<div class="footerFacebook">
 				<a href="https://www.facebook.com/losrobles.gr/" target="_blank"><img src="../images/faceLogo.png" alt="link to facebook"></a>
+			</div>
+			<div class="footerInstagram">
 				<a href="https://www.instagram.com/losroblesgr/?hl=es" target="_blank"><img src="../images/instaLogo.png" alt="link to instragram"></a>
-				<a href="https://www.whatsapp.com" target="_blank"><img src="../images/wppLogo.png" alt="link to whatsapp"></a>
+			</div>
+			<div class="footerWhatsApp">
+			<a href="https://www.whatsapp.com" target="_blank"><img src="../images/wppLogo.png" alt="link to whatsapp"></a>
 			</div>
 		</footer>
 	</body>
