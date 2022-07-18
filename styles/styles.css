@@ -46,6 +46,8 @@ header{
 
 .navBar{
   display: grid;
+  padding-top: 8px;
+  padding-bottom: 8px;
   min-height: fit-content(18vh);
   grid-template-areas:
     "li li li li li"
@@ -455,11 +457,11 @@ footer img{
   }
 
   .homepageLogo{
-    top: -27vh;
+    top: -23vh;
   }
 
   .homepageLogo a{
-    top: 28vh;
+    top: 25vh;
   }
 
   .navBarLogo a h1, .homepageLogo a h1{
