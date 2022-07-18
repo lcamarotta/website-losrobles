@@ -46,7 +46,7 @@ header{
 
 .navBar{
   display: grid;
-  height: 18vh;
+  min-height: fit-content(18vh);
   grid-template-areas:
     "li li li li li"
     "l1 l1 .  l4 l4"
@@ -333,7 +333,7 @@ header{
 footer{
   display: grid;
   width: 100%;
-  height: 15vh;
+  min-height: fit-content(15vh);
   color: #f9ffed;
   grid-template-areas: 
     "fTop"
@@ -421,7 +421,7 @@ footer img{
 @media screen and (min-width: 780px){
 
   .navBar{
-    height: 14vh;
+    min-height: fit-content(14vh);
     grid-template-areas:
       "li li li li"
       "l1 l2 l3 l4";
@@ -446,7 +446,7 @@ footer img{
 @media screen and (min-width: 1024px){
 
   .navBar{
-    height: 20vh;
+    height: min-content(20vh);
     grid-template-rows: 3fr 1fr;
   }
 
@@ -497,6 +497,10 @@ footer img{
    height: 80%;
   }
   
+  .footer{
+    min-height: fit-content;
+  }
+
   .footerSocial div{
     margin: 0 20px;
   }
@@ -510,7 +514,7 @@ footer img{
 @media screen and (min-width: 1200px){
 
   .navBar{
-    height: 10vh;
+    min-height: fit-content(10vh);
     margin-top: 5px;
     grid-template-areas:
     "l1 l2 li  l3 l4";
