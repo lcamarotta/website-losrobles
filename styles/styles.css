@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Gantari', sans-serif;
+  order: solid black 1px;
 }
 
 body{
@@ -45,12 +46,13 @@ header{
 
 .navBar{
   display: grid;
-  height: 14vh;
+  height: 18vh;
   grid-template-areas:
-    "li li li li"
-    "l1 l2 l3 l4";
-  grid-template-rows: 2fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+    "li li li li li"
+    "l1 l1 .  l4 l4"
+    ".  l2 .  l3 . ";
+  grid-template-rows: 2fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .navBar li{
@@ -126,7 +128,7 @@ header{
 }
 
 .subtitle{
-  font-size: 1.8em;
+  font-size: 30px;
   font-weight: 400;
   padding-bottom: 10px;
 }
@@ -135,13 +137,13 @@ header{
   max-width: 500px;
   height: fit-content;
   padding: 0 15px 15px 15px;
-  font-size: larger;
+  font-size: 20px;
   font-weight: 300;
   text-align: center;
   line-height: 28px;
 }
 
-.section3_home{
+.section3_home, .section3_home div{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -150,8 +152,8 @@ header{
 
 .product_img, .onSale img{
   margin: 10px;
-  width: 300px;
-  height: 270px;
+  width: 240px;
+  height: 210px;
   border-style: solid;
   border-style: double;
   border-width: 4px;
@@ -170,10 +172,17 @@ header{
   flex-direction: column;
 }
 
+.onSale_containter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .onSale{
-  display: inline-block;
-  margin: 25px;
-  padding: 18px 18px 5px 18px;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  padding: 8px 8px 5px 8px;
   background-color: #a28b5c36;
   border-radius: 10px;
 }
@@ -189,6 +198,7 @@ header{
 
 .onSaleDescription a{
   display: inline-block;
+  width: fit-content;
   margin-top: 15px;
   padding: 4px 18px;
   border-color: #606969;
@@ -277,9 +287,9 @@ header{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin: 8px;
-  padding: 15px;
-  height: 60%;
+  margin: 4px;
+  padding: 10px;
+  height: fit-content;
   border-radius: 30px;
   color: #361500;
   background-color: #FCDEC0;
@@ -295,6 +305,7 @@ header{
 
 .contact_div1{
   display: flex;
+  flex-direction: column;
   width: 100%;
   justify-content: space-between;
   padding: 4px;
@@ -309,37 +320,14 @@ header{
 /* -------- footer -------- */
 .footerText{
   grid-area: fText;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .footerTop{
   grid-area: fTop;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.footerFacebook{
-  grid-area: fFacebook;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.footerInstagram{
-  grid-area: fInstagram;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footerWhatsApp{
-  grid-area: fWhatsApp;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+.footerSocial{
+  grid-area: fSocial;
 }
 
 footer{
@@ -348,13 +336,23 @@ footer{
   height: 15vh;
   color: #f9ffed;
   grid-template-areas: 
-    "fTop fTop fTop"
-    "fFacebook fInstagram fWhatsApp"
-    "fText fText fText";
-  grid-template-columns: 2fr 1fr 2fr;
-  grid-template-rows: 2fr 1fr 1fr;
+    "fTop"
+    "fSocial"
+    "fText";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   background-image: url(../images/img_11.jpg);
   background-size: contain;
+}
+
+.footerText, .footerTop, .footerSocial{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerSocial div{
+  margin: 0 8px;
 }
 
 footer img{
@@ -362,3 +360,252 @@ footer img{
   height: 30px;
 }
 /* -------- --- -------- */
+
+/* -------- media queries -------- */
+@media screen and (min-width: 600px){
+
+  .navBar li{
+    font-size: 1.25em;
+  }
+  
+  .homepageLogo{
+    top: -31vh;
+  }
+
+  .section3_home div{
+    margin-bottom: 25px;
+  }
+
+  .product_img, .onSale img{
+    width: 300px;
+    height: 270px;
+  }
+
+  .onSale{
+    margin: 25px;
+    padding: 18px 18px 5px 18px;
+  }
+
+  .mainAbout{
+    grid-template-areas: 
+      "s1 s1"
+      "t1 i1"
+      "t2 i1"
+      "s2 s2"
+      "v1 v1";
+  }
+
+  .about_img1{
+    justify-content: center;
+  }
+
+  .about_img1 img{
+    height: 320px;
+  }
+
+  .contactForm_container{
+    margin: 8px;
+    padding: 15px;
+    height: 70%;
+  }
+
+  .contact_div2{
+    padding: 20px;
+  }
+
+  .footerSocial div{
+    margin: 0 15px;
+  }
+}
+
+@media screen and (min-width: 780px){
+
+  .navBar{
+    height: 14vh;
+    grid-template-areas:
+      "li li li li"
+      "l1 l2 l3 l4";
+    grid-template-rows: 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .homepageLogo{
+    top: -33vh;
+  }
+  
+  .section1_home h2{
+    font-size: 1.2em;
+  }
+
+  .product_img, .onSale img{
+    width: 360px;
+    height: 330px;
+  }
+}
+
+@media screen and (min-width: 1024px){
+
+  .navBar{
+    height: 20vh;
+    grid-template-rows: 3fr 1fr;
+  }
+
+  .navBar li{
+    font-size: 1.5em;
+  }
+
+  .homepageLogo{
+    top: -27vh;
+  }
+
+  .homepageLogo a{
+    top: 28vh;
+  }
+
+  .navBarLogo a h1, .homepageLogo a h1{
+    font-size: 70px;
+  }
+
+  .section1_home h2{
+    top: 40vh;
+    font-size: 1.6em;
+  }
+
+  .subtitle{
+    font-size: 2em;
+  }
+
+  .textBox{
+    font-size: 1.6em;
+    max-width: 700px;
+  }
+
+  .section3_home div{
+    width: 96vw;
+    flex-direction: row;
+    overflow: hidden;
+    flex-wrap: wrap;
+  }
+
+  .imgGalery, .onSale_containter{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contactForm_container{
+   height: 80%;
+  }
+  
+  .footerSocial div{
+    margin: 0 20px;
+  }
+
+  footer img{
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px){
+
+  .navBar{
+    height: 10vh;
+    margin-top: 5px;
+    grid-template-areas:
+    "l1 l2 li  l3 l4";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 4fr 1fr 1fr;
+  }
+
+  .navBarLogo, .navBar li{
+    justify-self: center;
+    align-self: center;
+  }
+  
+  .section1_home{
+    height: 90vh;
+  }
+
+  .section1_home h2{
+    font-size: 1.6em;
+  }
+
+  .subtitle{
+    font-size: 2.5em;
+  }
+
+  .textBox{
+    font-size: 1.6em;
+    max-width: 850px;
+  }
+
+  .section2_home{
+    height: 60vh;
+  }
+
+  .section3_home{
+    margin-bottom: 60px;
+  }
+
+  .mainAbout{
+    grid-template-areas: 
+      "s1 s1 s1"
+      "t1 t1 i1"
+      "t2 t2 i1"
+      "s2 s2 s2"
+      "v1 v1 v1";
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+  .about_subtitle1, .about_subtitle2{
+    justify-self: center;
+  }
+
+  .about_t1, .about_t2{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .about_img1{
+    display: flex;
+    justify-self: flex-start;
+  }
+
+  .mainAbout iframe{
+    margin-bottom: 30px;
+  }
+
+  .contactForm_container{
+    height: auto;
+  }
+
+  footer{
+    height: 10vh;
+    grid-template-areas: 
+      "fTop  fSocial"
+      "fText  fText";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+  }
+  .footerSocial{
+    justify-content: flex-end;
+    margin-right: 4%;
+  }
+
+  .footerSocial div{
+    margin: 10px 8px 0 8px;
+  }
+
+  .footerTop{
+    position: absolute;
+    justify-self: center;
+    margin-top: 10px;
+  }
+
+  footer img{
+    width: 40px;
+    height: 40px;
+  }
+}
