@@ -1,8 +1,8 @@
 *{
   margin: 0;
   padding: 0;
+  text-decoration: none;
   font-family: 'Gantari', sans-serif;
-  order: solid black 1px;
 }
 
 body{
@@ -17,7 +17,6 @@ header{
   position: sticky;
   top: 0;
   background-image: url(../images/img_12.jpg);
-  background-position: center;
   background-size: contain;
   z-index: 1;
 }
@@ -40,30 +39,25 @@ header{
 
 .navBarLogo{
   grid-area: li;
-  display: flex;
-  align-items: flex-end;
 }
 
 .navBar{
   display: grid;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  min-height: fit-content(18vh);
+  height: 95px;
+  padding: 10px 5px;
   grid-template-areas:
     "li li li li li"
     "l1 l1 .  l4 l4"
     ".  l2 .  l3 . ";
-  grid-template-rows: 2fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .navBar li{
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .navBar a{
-  text-decoration: none;
   color: #f9ffed;
   font-variant: small-caps;
 }
@@ -76,79 +70,50 @@ header{
 /* -------- --- -------- */
 
 /* -------- main -------- */
-.homepage{
-  display: flex;
-  flex-direction: column;
-}
-
-.homepageLogo{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: sticky;
-  top: -33vh;
-  background-color: black;
-  z-index: 2;
-}
-
-.homepageLogo a{
-  position: absolute;
-  top: 35vh;
-  color: #f9ffed;
-  text-decoration: none;
-}
-
-.homepageLogo a h1{
-  font-size: 45px;
-  font-family: 'Great Vibes', cursive;
-}
-
 .section1_home{
-  width: 100%;
-  height: 87vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  height: calc(100vh - 115px);
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../images/img_10.jpg);
   background-position: center;
   background-size: cover;
 }
 
-.section1_home h2{
-  position: relative;
-  height: fit-content;
-  top: 42vh;
+.section1_home h2, .section1_home p{
   color: #f9ffed;
-  font-size: 18px;
+  font-size: 20px;
+  font-variant: small-caps;
 }
 
 .section2_home{
   display: flex;
-  height: 80vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 30px 15px;
+  min-height: 70vh;
 }
 
 .subtitle{
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 400;
   padding-bottom: 10px;
 }
 
 .textBox{
   max-width: 500px;
-  height: fit-content;
   padding: 0 15px 15px 15px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300;
   text-align: center;
-  line-height: 28px;
+  line-height: 26px;
 }
 
 .section3_home, .section3_home div{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -156,7 +121,6 @@ header{
   margin: 10px;
   width: 240px;
   height: 210px;
-  border-style: solid;
   border-style: double;
   border-width: 4px;
   border-radius: 30px;
@@ -164,9 +128,9 @@ header{
 
 .mainGalery, .mainShop{
   display: flex;
-  margin-top: 25px;
   flex-direction: column;
   align-items: center;
+  margin-top: 25px;
 }
 
 .imgGalery{
@@ -174,16 +138,8 @@ header{
   flex-direction: column;
 }
 
-.onSale_containter{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .onSale{
-  display: flex;
-  flex-direction: column;
-  margin: 5px;
+  margin: 15px;
   padding: 8px 8px 5px 8px;
   background-color: #a28b5c36;
   border-radius: 10px;
@@ -200,7 +156,6 @@ header{
 
 .onSaleDescription a{
   display: inline-block;
-  width: fit-content;
   margin-top: 15px;
   padding: 4px 18px;
   border-color: #606969;
@@ -208,7 +163,6 @@ header{
   border-style: outset;
   border-radius: 12px;
   background-color: #3f4e4f;
-  text-decoration: none;
   color: azure;
   font-size: 17px;
   font-weight: bolder;
@@ -224,12 +178,6 @@ header{
     "s2 s2"
     "v1 v1";
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: 
-  fit-content
-  fit-content
-  fit-content
-  fit-content
-  fit-content;
 }
 
 .about_subtitle1{
@@ -288,10 +236,8 @@ header{
 .contactForm_container{
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  margin: 4px;
-  padding: 10px;
-  height: fit-content;
+  margin: 5px;
+  padding: 15px;
   border-radius: 30px;
   color: #361500;
   background-color: #FCDEC0;
@@ -299,17 +245,14 @@ header{
 .contactForm{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: larger;
+  font-size: large;
   text-align: center;
 }
 
 .contact_div1{
   display: flex;
   flex-direction: column;
-  width: 100%;
-  justify-content: space-between;
   padding: 4px;
 }
 
@@ -334,14 +277,11 @@ header{
 
 footer{
   display: grid;
-  width: 100%;
-  min-height: fit-content(15vh);
   color: #f9ffed;
   grid-template-areas: 
     "fTop"
     "fSocial"
     "fText";
-  grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   background-image: url(../images/img_11.jpg);
   background-size: contain;
@@ -365,17 +305,18 @@ footer img{
 
 /* -------- media queries -------- */
 @media screen and (min-width: 600px){
+  .navBar{
+    grid-template-areas:
+    "l1 li li li l4"
+    ".  l2 .  l3 . ";
+  }
 
   .navBar li{
     font-size: 1.25em;
   }
-  
-  .homepageLogo{
-    top: -31vh;
-  }
 
   .section3_home div{
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
 
   .product_img, .onSale img{
@@ -405,12 +346,6 @@ footer img{
     height: 320px;
   }
 
-  .contactForm_container{
-    margin: 8px;
-    padding: 15px;
-    height: 70%;
-  }
-
   .contact_div2{
     padding: 20px;
   }
@@ -423,20 +358,13 @@ footer img{
 @media screen and (min-width: 780px){
 
   .navBar{
-    min-height: fit-content(14vh);
     grid-template-areas:
       "li li li li"
       "l1 l2 l3 l4";
-    grid-template-rows: 2fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
-  .homepageLogo{
-    top: -33vh;
-  }
-  
   .section1_home h2{
-    font-size: 1.2em;
+    font-size: 1.6em;
   }
 
   .product_img, .onSale img{
@@ -448,29 +376,17 @@ footer img{
 @media screen and (min-width: 1024px){
 
   .navBar{
-    height: min-content(20vh);
-    grid-template-rows: 3fr 1fr;
+    grid-template-areas:
+    "l1 l2 li l3 l4";
+    grid-template-columns: 1fr 1fr 4fr 1fr 1fr;
   }
 
   .navBar li{
     font-size: 1.5em;
   }
 
-  .homepageLogo{
-    top: -23vh;
-  }
-
-  .homepageLogo a{
-    top: 25vh;
-  }
-
-  .navBarLogo a h1, .homepageLogo a h1{
+  .navBarLogo a h1{
     font-size: 70px;
-  }
-
-  .section1_home h2{
-    top: 40vh;
-    font-size: 1.6em;
   }
 
   .subtitle{
@@ -478,29 +394,21 @@ footer img{
   }
 
   .textBox{
-    font-size: 1.6em;
+    font-size: 1.4em;
     max-width: 700px;
   }
 
   .section3_home div{
-    width: 96vw;
     flex-direction: row;
-    overflow: hidden;
+    justify-content: center;
     flex-wrap: wrap;
   }
 
-  .imgGalery, .onSale_containter{
+  .imgGalery, .onSale_container{
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-  }
-
-  .contactForm_container{
-   height: 80%;
-  }
-  
-  .footer{
-    min-height: fit-content;
   }
 
   .footerSocial div{
@@ -515,39 +423,21 @@ footer img{
 
 @media screen and (min-width: 1200px){
 
-  .navBar{
-    min-height: fit-content(10vh);
-    margin-top: 5px;
-    grid-template-areas:
-    "l1 l2 li  l3 l4";
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 4fr 1fr 1fr;
-  }
-
-  .navBarLogo, .navBar li{
-    justify-self: center;
-    align-self: center;
-  }
-  
-  .section1_home{
-    height: 90vh;
-  }
-
   .section1_home h2{
-    font-size: 1.6em;
+    font-size: 2em;
   }
 
   .subtitle{
-    font-size: 2.5em;
+    font-size: 2em;
   }
 
   .textBox{
-    font-size: 1.6em;
-    max-width: 850px;
+    font-size: 1.4em;
+    max-width: 800px;
   }
 
   .section2_home{
-    height: 60vh;
+    min-height: 55vh;
   }
 
   .section3_home{
@@ -575,7 +465,6 @@ footer img{
   }
 
   .about_img1{
-    display: flex;
     justify-self: flex-start;
   }
 
@@ -584,11 +473,10 @@ footer img{
   }
 
   .contactForm_container{
-    height: auto;
+    padding: 60px;
   }
 
   footer{
-    height: 10vh;
     grid-template-areas: 
       "fTop  fSocial"
       "fText  fText";
@@ -597,21 +485,12 @@ footer img{
   }
   .footerSocial{
     justify-content: flex-end;
-    margin-right: 4%;
-  }
-
-  .footerSocial div{
-    margin: 10px 8px 0 8px;
+    margin: 10px;
   }
 
   .footerTop{
     position: absolute;
     justify-self: center;
     margin-top: 10px;
-  }
-
-  footer img{
-    width: 40px;
-    height: 40px;
   }
 }
