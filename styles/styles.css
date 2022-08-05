@@ -64,6 +64,7 @@ header{
 .navBar a{
   color: #f9ffed;
   font-variant: small-caps;
+  text-decoration: none;
 }
 
 .navBarLogo a h1{
@@ -124,7 +125,29 @@ header{
   line-height: 26px;
 }
 
-.section3_home, .section3_home div{
+.section3_home{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.product_img, .onSale img, .carousel_img{
+  width: 240px;
+  height: 210px;
+  border-style: double;
+  border-width: 4px;
+  border-radius: 30px;
+}
+
+.carousel-inner{
+  width: 240px;
+  height: 210px;
+}
+
+.carousel{
+  width: 100vw;
+  height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -132,11 +155,6 @@ header{
 
 .product_img, .onSale img{
   margin: 10px;
-  width: 240px;
-  height: 210px;
-  border-style: double;
-  border-width: 4px;
-  border-radius: 30px;
 }
 
 .mainGalery, .mainShop{
@@ -335,7 +353,7 @@ footer img{
     }
   }
 
-img:hover{
+.hover_zoom:hover, footer img:hover{
   transform: scale(1.075)
 }
 
@@ -393,13 +411,14 @@ img:hover{
     font-size: 1.25em;
   }
 
-  .section3_home div{
-    margin-bottom: 20px;
-  }
-
-  .product_img, .onSale img{
+  .product_img, .onSale img, .carousel_img, .carousel-inner{
     width: 300px;
     height: 270px;
+  }
+  
+  .carousel{
+    width: 400px;
+    height: 320px;
   }
 
   .onSale{
@@ -445,9 +464,14 @@ img:hover{
     font-size: 1.6em;
   }
 
-  .product_img, .onSale img{
+  .product_img, .onSale img, .carousel_img, .carousel-inner{
     width: 360px;
     height: 330px;
+  }
+
+  .carousel{
+    width: 480px;
+    height: 380px;
   }
 }
 
@@ -474,12 +498,6 @@ img:hover{
   .textBox{
     font-size: 1.4em;
     max-width: 700px;
-  }
-
-  .section3_home div{
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
   }
 
   .imgGalery, .onSale_container{
@@ -520,6 +538,16 @@ img:hover{
 
   .section3_home{
     margin-bottom: 60px;
+  }
+
+  .carousel_img, .carousel-inner{
+    width: 560px;
+    height: 530px;
+  }
+
+  .carousel{
+    width: 760px;
+    height: 580px;
   }
 
   .mainAbout{
