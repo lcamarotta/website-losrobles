@@ -17,66 +17,48 @@ body{
 }
 
 /* -------- navBar -------- */
+.header-index{
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  padding: 2%;
+  background-image: url(../images/img_12.jpg);
+  background-size: contain;
+  z-index: 2;
+}
+
 header{
   position: sticky;
   top: 0;
+  padding: 2%;
   background-image: url(../images/img_12.jpg);
   background-size: contain;
-  z-index: 1;
 }
 
-.navBarLink1{
-  grid-area: l1;
+.navbar_desktop{
+  display: none;
 }
 
-.navBarLink2{
-  grid-area: l2;
-}
-
-.navBarLink3{
-  grid-area: l3;
-}
-
-.navBarLink4{
-  grid-area: l4;
-}
-
-.navBarLogo{
-  grid-area: li;
-}
-
-.navBar{
-  display: grid;
-  height: 95px;
-  padding: 10px 5px;
-  grid-template-areas:
-    "li li li li li"
-    "l1 l1 .  l4 l4"
-    ".  l2 .  l3 . ";
-}
-
-.navBar li{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.navBar a{
-  color: #f9ffed;
-  font-variant: small-caps;
+.navbar_desktopLogo a{
   text-decoration: none;
 }
 
-.navBarLogo a h1{
-  font-size: 45px;
-  font-variant: normal;
+.nav-link{
+  color: #f9ffed;
+  font-variant: small-caps;
+}
+
+.navbar-logo{
+  margin: 0;
+  color: #f9ffed;
+  font-size: 55px;
   font-family: 'Great Vibes', cursive;
 }
 /* -------- --- -------- */
 
 /* -------- main -------- */
 .section1_home{
-  height: calc(100vh - 115px);
+  height: 100vh;
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../images/img_10.jpg);
   background-position: center;
   background-size: cover;
@@ -335,9 +317,10 @@ footer img{
 /* -------- --- -------- */
 
 /* -------- eye candy -------- */
-.navBar a:hover{
-  transform: translate(0px, 4px) scale(1.05);
-  transition: all .015s;  
+.nav-link:hover, .navbar-logo:hover{
+  color: #f7fcd1;
+  transform: scale(1.015);
+  transition: all .02s;  
 }
 
 .section1_home div h2, .section1_home div p{
@@ -401,15 +384,6 @@ footer img{
   
 /* -------- media queries -------- */
 @media screen and (min-width: 600px){
-  .navBar{
-    grid-template-areas:
-    "l1 li li li l4"
-    ".  l2 .  l3 . ";
-  }
-
-  .navBar li{
-    font-size: 1.25em;
-  }
 
   .product_img, .onSale img, .carousel_img, .carousel-inner{
     width: 300px;
@@ -454,12 +428,6 @@ footer img{
 
 @media screen and (min-width: 780px){
 
-  .navBar{
-    grid-template-areas:
-      "li li li li"
-      "l1 l2 l3 l4";
-  }
-
   .section1_home div h2{
     font-size: 1.6em;
   }
@@ -475,50 +443,54 @@ footer img{
   }
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 992px){
 
-  .navBar{
+  header, .header-index{
+    padding: 0;
+  }
+
+  .navbar{
+    display: none;
+  }
+
+  .navbar_desktopLink1{
+    grid-area: l1;
+  }
+  
+  .navbar_desktopLink2{
+    grid-area: l2;
+  }
+  
+  .navbar_desktopLink3{
+    grid-area: l3;
+  }
+  
+  .navbar_desktopLink4{
+    grid-area: l4;
+  }
+  
+  .navbar_desktopLogo{
+    grid-area: li;
+  }
+  
+  .navbar_desktop{
+    display: grid;
+    padding: 10px 5px;
     grid-template-areas:
     "l1 l2 li l3 l4";
     grid-template-columns: 1fr 1fr 4fr 1fr 1fr;
   }
-
-  .navBar li{
+  .navbar_desktop li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1.5em;
   }
-
-  .navBarLogo a h1{
+  
+  .navbar_desktopLogo a h1{
     font-size: 70px;
-  }
-
-  .subtitle{
-    font-size: 2em;
-  }
-
-  .textBox{
-    font-size: 1.4em;
-    max-width: 700px;
-  }
-
-  .imgGalery, .onSale_container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .footerSocial div{
-    margin: 0 20px;
-  }
-
-  footer img{
-    width: 40px;
-    height: 40px;
-  }
-}
-
-@media screen and (min-width: 1200px){
-
+  }  
+  
   .section1_home div h2{
     font-size: 2em;
   }
@@ -548,6 +520,13 @@ footer img{
   .carousel{
     width: 760px;
     height: 580px;
+  }
+  
+  .imgGalery, .onSale_container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .mainAbout{
@@ -589,10 +568,21 @@ footer img{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr 1fr;
   }
+
+  footer img{
+    width: 40px;
+    height: 40px;
+  }
+
   .footerSocial{
     justify-content: flex-end;
     margin: 10px;
   }
+
+  .footerSocial div{
+    margin: 0 20px;
+  }
+
 
   .footerTop{
     position: absolute;
