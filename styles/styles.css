@@ -33,6 +33,7 @@ header{
   padding: 2%;
   background-image: url(../images/img_12.jpg);
   background-size: contain;
+  z-index: 2;
 }
 
 .navbar_desktop{
@@ -64,7 +65,7 @@ header{
   background-size: cover;
 }
 
-.section1_home div h2, .section1_home div p{
+.section1_home_text h2, .section1_home_text p{
   color: #f9ffed;
   font-size: 20px;
   font-variant: small-caps;
@@ -75,10 +76,13 @@ header{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.section1_home_arrow{
   justify-content: flex-end;
 }
 
-.section1_home div a img{
+.arrow img{
   width: 45px;
   height: 45px;
 }
@@ -323,7 +327,7 @@ footer img{
   transition: all .02s;  
 }
 
-.section1_home div h2, .section1_home div p{
+.section1_home_text h2, .section1_home_text p{
   animation: title-zoom 1.5s;
 }
   @keyframes title-zoom {
@@ -428,7 +432,7 @@ footer img{
 
 @media screen and (min-width: 780px){
 
-  .section1_home div h2{
+  .section1_home_text h2{
     font-size: 1.6em;
   }
 
@@ -491,7 +495,7 @@ footer img{
     font-size: 70px;
   }  
   
-  .section1_home div h2{
+  .section1_home_text h2{
     font-size: 2em;
   }
 
