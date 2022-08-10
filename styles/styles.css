@@ -125,7 +125,7 @@ header{
   margin-bottom: 25px;
 }
 
-.product_img, .onSale img, .carousel_img{
+.product_img, .carousel_img{
   width: 240px;
   height: 210px;
   border-style: double;
@@ -157,6 +157,10 @@ header{
   margin-top: 25px;
 }
 
+.bodyShop, .bodyGalery{
+  background-image: url(../images/old-paper-bg.jpg);
+}
+
 .imgGalery{
   display: flex;
   flex-direction: column;
@@ -165,8 +169,22 @@ header{
 .onSale{
   margin: 15px;
   padding: 8px 8px 5px 8px;
-  background-color: #a28b5c36;
-  border-radius: 10px;
+  background-color: #e5b29980;
+  border-style: double;
+  border-width: 4px;
+  border-radius: 20px;
+}
+
+.onSale-imgContainer{
+  border-style: double;
+  border-width: 4px;
+  border-radius: 30px;
+  background-image: url(../images/old-paper2-bg.jpg);
+}
+
+.onSale img{
+  width: 240px;
+  height: 210px;
 }
 
 .onSaleDescription{
@@ -351,6 +369,19 @@ footer img{
   transform: scale(1.075)
 }
 
+.hover_zoom-onSale:hover{
+  animation: onSaleZoom forwards 1.15s;
+  }
+
+  @keyframes onSaleZoom {
+  0%  {
+    transform: scale(1)
+  }
+  100%  {
+    transform: scale(1.2) 
+  }
+}
+
 .rotate180:hover{
   transform: scale(1.075) rotate(180deg);
 }
@@ -429,7 +460,7 @@ footer img{
   }
 
   .about_img1 img{
-    height: 320px;
+    height: 360px;
   }
 
   .contact_div2{
