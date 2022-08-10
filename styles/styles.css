@@ -16,13 +16,18 @@ body{
   grid-template-rows: auto 1fr auto;
 }
 
+.rotate180{
+  width: 25px;
+  height: 25px;
+  transform: rotate(180deg);
+}
 /* -------- navBar -------- */
 .header-index{
   position: fixed;
   top: 0;
   width: 100vw;
   padding: 2%;
-  background-image: url(../images/img_12.jpg);
+  background-image: url(../images/nav-bg.jpg);
   background-size: contain;
   z-index: 2;
 }
@@ -31,13 +36,14 @@ header{
   position: sticky;
   top: 0;
   padding: 2%;
-  background-image: url(../images/img_12.jpg);
+  background-image: url(../images/nav-bg.jpg);
   background-size: contain;
   z-index: 2;
 }
 
 .navbar_desktop{
   display: none;
+  margin: 0;
 }
 
 .navbar_desktopLogo a{
@@ -60,7 +66,7 @@ header{
 /* -------- main -------- */
 .section1_home{
   height: 100vh;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../images/img_10.jpg);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../images/cover-bg.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -83,8 +89,9 @@ header{
 }
 
 .arrow img{
-  width: 45px;
-  height: 45px;
+  margin-bottom: 5px;
+  width: 30px;
+  height: 30px;
 }
 
 .section2_home{
@@ -245,7 +252,7 @@ header{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../images/img_10.jpg);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../images/cover-bg.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -300,7 +307,7 @@ footer{
     "fSocial"
     "fText";
   grid-template-rows: 1fr 1fr 1fr;
-  background-image: url(../images/img_11.jpg);
+  background-image: url(../images/footer-bg.jpg);
   background-size: contain;
 }
 
@@ -342,6 +349,10 @@ footer img{
 
 .hover_zoom:hover, footer img:hover{
   transform: scale(1.075)
+}
+
+.rotate180:hover{
+  transform: scale(1.075) rotate(180deg);
 }
 
 .arrow{
@@ -479,7 +490,7 @@ footer img{
   
   .navbar_desktop{
     display: grid;
-    padding: 10px 5px;
+    padding: 15px 5px 0 5px;
     grid-template-areas:
     "l1 l2 li l3 l4";
     grid-template-columns: 1fr 1fr 4fr 1fr 1fr;
