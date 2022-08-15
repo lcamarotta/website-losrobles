@@ -1,0 +1,76 @@
+.nav-link:hover, .navbar-logo:hover {
+  color: $font-color-special;
+  transform: scale(1.015);
+  transition: all .02s;  
+}
+
+.hover_zoom:hover {
+  transform: scale(1.075)
+}
+
+.rotate180:hover {
+  transform: scale(1.075) rotate(180deg);
+}
+
+.section1_home_text {
+  h2, p {
+    animation: title-zoom 1.5s;
+  }
+}
+@keyframes title-zoom {
+  0% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.hover_zoom-onSale:hover{
+  animation: onSaleZoom forwards 1.15s;
+  }
+@keyframes onSaleZoom {
+  0%  {
+    transform: scale(1)
+  }
+  100%  {
+    transform: scale(1.2) 
+  }
+}
+
+.arrow{
+  animation: pulse-1 3s infinite;
+  }
+@keyframes pulse-1 {
+  0% {
+    transform: scale(0.8);
+  }
+  
+  50% {
+    transform: scale(1);
+  }
+  
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+.onSaleDescription a:hover{
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  transform: scale(1);
+  animation: pulse-2 2s infinite;
+}
+@keyframes pulse-2 {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}

@@ -1,0 +1,35 @@
+header{
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  padding: 2%;
+  background-image: url(../images/nav-bg.jpg);
+  background-size: contain;
+  z-index: 2;
+}
+
+.header-index{
+  @extend header;
+  position: fixed;
+}
+
+.navbar_desktop{
+  display: none;
+  margin: 0;
+
+  li a{
+    text-decoration: none;
+  }
+}
+
+.nav-link{
+  color: $font-color-light;
+  font-variant: small-caps;
+}
+
+.navbar-logo{
+  margin: 0;
+  color: $font-color-light;
+  font-size: 55px;
+  font-family: 'Great Vibes', cursive;
+}

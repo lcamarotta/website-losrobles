@@ -1,0 +1,55 @@
+.mainAbout{
+  display: grid;
+  margin: 25px 5px 0 5px;
+  grid-template-areas: 
+    "s1 s1"
+    "t1 i1"
+    "t2 t2"
+    "s2 s2"
+    "v1 v1";
+  grid-template-columns: 2fr 1fr;
+}
+
+.about_subtitle1{
+  grid-area: s1;
+}
+
+.about_subtitle2{
+  grid-area: s2;
+  margin-top: 10px;
+}
+
+.about_t1{
+  grid-area: t1;
+}
+
+.about_t2{
+  grid-area: t2;
+}
+
+.about_img1{
+  grid-area: i1;
+  display: flex;
+  align-items: center;
+}
+
+.about_video1{
+  grid-area: v1;
+  display: flex;
+  justify-content: center;
+}
+
+.mainAbout div p{
+  text-align: justify;
+}
+
+.about_img1 img{
+  height: 240px;
+  border-radius: 10px;
+}
+
+.about_video1 iframe{
+  margin-top: 10px;
+  margin-bottom: 15px;
+  max-width: 98%;
+}
