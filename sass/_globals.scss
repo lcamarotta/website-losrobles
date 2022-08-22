@@ -1,0 +1,113 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Gantari', sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.td-none{
+  text-decoration: none;
+}
+
+.rotate180{
+  width: 25px;
+  height: 25px;
+  transform: rotate(180deg);
+}
+
+.subtitle{
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+
+.textBox{
+  max-width: 500px;
+  padding: 0 15px 15px 15px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-align: center;
+  line-height: 26px;
+}
+
+/*------------------navbar------------------*/
+header{
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 2%;
+  background-image: url(../images/nav-bg.jpg);
+  background-size: contain;
+  z-index: 2;
+}
+
+.header-index{
+  @extend header;
+  position: fixed;
+}
+
+.nav-link{
+  color: $font-color-light;
+  font-variant: small-caps;
+}
+
+.navbar-logo{
+  margin: 0;
+  color: $font-color-light;
+  font-size: 3.5rem;
+  font-family: 'Great Vibes', cursive;
+}
+/*------------------------------------------*/
+
+/*------------------footer------------------*/
+.footerText{
+  grid-area: fText;
+}
+
+.footerTop{
+  grid-area: fTop;
+}
+
+.footerSocial{
+  grid-area: fSocial;
+}
+
+footer{
+  display: grid;
+  color: $font-color-light;
+  grid-template-areas: 
+    "fTop"
+    "fSocial"
+    "fText";
+  grid-template-rows: 1fr 1fr 1fr;
+  background-image: url(../images/footer-bg.jpg);
+  background-size: contain;
+
+  img{
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.footerText, .footerTop{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerSocial{
+  @extend .footerText;
+  div {
+    margin: 0 8px;
+  }
+}
+/*------------------------------------------*/
