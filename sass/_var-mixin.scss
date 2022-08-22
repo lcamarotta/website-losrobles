@@ -8,3 +8,11 @@ $color-5: #3f4e4f;
 $font-color-dark: #303841;
 $font-color-light: #f9ffed;
 $font-color-special: #f7fcd1;
+
+  
+@mixin  flex-column-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

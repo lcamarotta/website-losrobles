@@ -12,6 +12,7 @@ body{
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  background-image: url(../images/old-paper-bg.jpg);
 }
 
 .td-none{
@@ -37,6 +38,42 @@ body{
   font-weight: 300;
   text-align: center;
   line-height: 26px;
+}
+
+$redes:(
+  whatsapp: #25D366,
+  facebook: #4267B2,
+  instagram: #E1306C
+);
+
+@each $red, $color in $redes {
+  .btn--#{$red}{
+    background-color: $color;
+  }
+}
+
+.divSocial{
+  @include flex-column-center();
+  align-items: flex-end;
+  margin: 0 10px 10px 0;
+
+  .btn--rsocial{
+    @extend .hover_zoom;
+    display: inline-block;
+    margin: 4px 2px;
+    height: 40px;
+    width: 125px;
+    border: none;
+    color: $font-color-light;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+
+    a{
+      color: $font-color-light;
+    }
+  }
 }
 
 /*------------------navbar------------------*/
