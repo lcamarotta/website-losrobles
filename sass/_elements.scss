@@ -15,7 +15,18 @@
         font-size: 1.3rem;
         font-variant: small-caps;
       }
+      @media screen and (min-width: 780px){
+        h2{
+        font-size: 1.6rem;
+        }
+      }
+      @media screen and (min-width: 992px){
+        h2{
+        font-size: 2rem;
+        }
+      }
     }
+  }
   
     .section1_home_arrow{
       @include flex-column-center();
@@ -27,7 +38,6 @@
         height: 30px;
       }
     }
-  }
   
   .section2_home{
     @include flex-column-center;
@@ -37,24 +47,35 @@
   
   .section3_home{
     @include flex-column-center;
-    margin-bottom: 25px;
-  }
-  
-  .carousel{
-    @include flex-column-center;
-    justify-content: initial;
-    width: 100vw;
-    height: 250px;
+    margin-bottom: 25px;  
 
-    .carousel-inner{
-      width: 240px;
-      height: 210px;
-      
-      div img{
-        @extend .carousel-inner;
-        border-style: double;
-        border-width: 4px;
-        border-radius: 30px;
+    .carousel{
+      @include flex-column-center;
+      justify-content: initial;
+      width: 100vw;
+      height: 250px;
+  
+      .carousel-inner{
+        width: 240px;
+        height: 210px;
+        
+        div img{
+          @extend .carousel-inner;
+          border-style: double;
+          border-width: 4px;
+          border-radius: 30px;
+        }
+      }
+    }
+    @media screen and (min-width: 780px){
+      margin-bottom: 60px;
+      .carousel{
+        width: 760px;
+        height: 580px;
+        .carousel_img, .carousel-inner{
+          width: 560px;
+          height: 530px;
+        }
       }
     }
   }
@@ -66,49 +87,58 @@
 .mainShop{
   @include flex-column-center;
   margin-top: 25px;
-
-  .onSale{
-    margin: 15px;
-    padding: 8px;
-    background-color: $color-3;
-    border-style: double;
-    border-width: 4px;
-    border-radius: 20px;
+  .onSale_container{
+    .onSale{
+      margin: 15px;
+      padding: 8px;
+      background-color: $color-3;
+      border-style: double;
+      border-width: 4px;
+      border-radius: 20px;
   
-    .onSale-imgContainer{
-      @extend .onSale;
-      background-image: url(../images/old-paper2-bg.jpg);
-      img{
-        width: 240px;
-        height: 210px;
-      }
-    } 
+      .onSale-imgContainer{
+        @extend .onSale;
+        background-image: url(../images/old-paper2-bg.jpg);
+        img{
+          width: 240px;
+          height: 210px;
+        }
+      } 
   
-    .onSaleDescription{
-      text-align: center;
-      margin: 10px;
-      .onSaleDescription_text{
-        margin: 0;
-        font-size: 1.1rem;
+      .onSaleDescription{
+        text-align: center;
+        margin: 10px;
+        .onSaleDescription_text{
+          margin: 0;
+          font-size: 1.1rem;
+        }
+        .price{
+          margin: 0;
+          font-size: 1.5rem;
+          font-weight: bolder;
+        }
+        a{
+          display: inline-block;
+          margin-top: 10px;
+          padding: 4px 18px;
+          border-color: $color-4;
+          border-width: 6px;
+          border-style: outset;
+          border-radius: 12px;
+          background-color: $color-5;
+          color: $font-color-light;
+          font-size: 1.1rem;
+          font-weight: bolder;
+        }
       }
-      .price{
-        margin: 0;
-        font-size: 1.5rem;
-        font-weight: bolder;
-      }
-      a{
-        display: inline-block;
-        margin-top: 10px;
-        padding: 4px 18px;
-        border-color: $color-4;
-        border-width: 6px;
-        border-style: outset;
-        border-radius: 12px;
-        background-color: $color-5;
-        color: $font-color-light;
-        font-size: 1.1rem;
-        font-weight: bolder;
-      }
+    }
+  }
+  @media screen and (min-width: 780px){
+    .onSale_container{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
     }
   }
 }
@@ -130,6 +160,14 @@
       border-style: double;
       border-width: 4px;
       border-radius: 30px;
+    }
+  }
+  @media screen and (min-width: 780px){
+    .imgGalery{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
     }
   }
 }
@@ -180,6 +218,51 @@
     }
   }
 }
+
+@media screen and (min-width: 600px){
+  .mainAbout{
+    grid-template-areas: 
+      "s1 s1"
+      "t1 i1"
+      "t2 i1"
+      "s2 s2"
+      "v1 v1";
+
+      div{
+        @include flex-column-center;
+      }
+  }
+}
+@media screen and (min-width: 992px){
+
+  .mainAbout{
+    grid-template-areas: 
+      "s1 s1 s1"
+      "t1 t1 i1"
+      "t2 t2 i1"
+      "s2 s2 s2"
+      "v1 v1 v1";
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .about_subtitle1, .about_subtitle2{
+    justify-self: center;
+  }
+
+  .about_t1, .about_t2{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .about_img1{
+    justify-self: flex-start;
+  }
+
+  .mainAbout iframe{
+    margin-bottom: 30px;
+  }
+}
 /*------------------------------------------*/
 
 /*------------------contact-----------------*/
@@ -209,6 +292,11 @@
       .contact_div2{
         padding: 6px;
       }
+    }
+  }
+  @media screen and (min-width: 780px){
+    .contactForm_container{
+      padding: 60px;
     }
   }
 }

@@ -13,6 +13,7 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   background-image: url(../images/old-paper-bg.jpg);
+  background-size: cover;
 }
 
 .td-none {
@@ -40,6 +41,15 @@ body {
   line-height: 26px;
 }
 
+@media screen and (min-width: 992px) {
+  .subtitle {
+    font-size: 2em;
+  }
+  .textBox {
+    font-size: 1.4em;
+    max-width: 800px;
+  }
+}
 .btn--whatsapp {
   background-color: #25D366;
 }
@@ -52,15 +62,32 @@ body {
   background-color: #E1306C;
 }
 
-.divSocial {
+/*------------------navbar------------------*/
+header, .header-index {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 2%;
+  background-image: url(../images/nav-bg.jpg);
+  background-size: contain;
+  z-index: 2;
+}
+header .offcanvas-body, .header-index .offcanvas-body {
+  overflow-y: visible;
+}
+header .divSocial, .header-index .divSocial {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  align-items: flex-end;
+  align-self: flex-end;
   margin: 0 10px 10px 0;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
-.divSocial .btn--rsocial {
+header .divSocial .btn--rsocial, .header-index .divSocial .btn--rsocial {
   display: inline-block;
   margin: 4px 2px;
   height: 40px;
@@ -72,20 +99,8 @@ body {
   border-radius: 6px;
   cursor: pointer;
 }
-.divSocial .btn--rsocial a {
+header .divSocial .btn--rsocial a, .header-index .divSocial .btn--rsocial a {
   color: #f9ffed;
-}
-
-/*------------------navbar------------------*/
-header, .header-index {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  width: 100%;
-  padding: 2%;
-  background-image: url(../images/nav-bg.jpg);
-  background-size: contain;
-  z-index: 2;
 }
 
 .header-index {
@@ -104,6 +119,35 @@ header, .header-index {
   font-family: "Great Vibes", cursive;
 }
 
+.logo_desktop {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  header, .header-index {
+    padding: 0%;
+  }
+  header .logo_mobile, .header-index .logo_mobile, header .divSocial, .header-index .divSocial {
+    display: none;
+  }
+  header .navbar-logo, .header-index .navbar-logo {
+    font-size: 4rem;
+  }
+  header .nav-link, .header-index .nav-link {
+    font-size: 1.5rem;
+  }
+  header .container-fluid, .header-index .container-fluid, header .navbar, .header-index .navbar {
+    width: 100%;
+  }
+  header .navbar-nav, .header-index .navbar-nav {
+    margin: 0 15px;
+    justify-content: space-between !important;
+    align-items: flex-end !important;
+  }
+  header .navbar-nav .logo_desktop, .header-index .navbar-nav .logo_desktop {
+    display: flex;
+  }
+}
 /*------------------------------------------*/
 /*------------------footer------------------*/
 .footerText, .footerSocial {
@@ -141,6 +185,29 @@ footer img {
   margin: 0 8px;
 }
 
+@media screen and (min-width: 780px) {
+  footer {
+    grid-template-areas: "fTop  fSocial" "fText  fText";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+  }
+  footer img {
+    width: 40px;
+    height: 40px;
+  }
+  footer .footerSocial {
+    justify-content: flex-end;
+    margin: 10px;
+  }
+  footer .footerSocial div {
+    margin: 0 20px;
+  }
+  footer .footerTop {
+    position: absolute;
+    justify-self: center;
+    margin-top: 10px;
+  }
+}
 /*------------------------------------------*/
 /*-------------------home-------------------*/
 .homepage .section1_home {
@@ -162,7 +229,17 @@ footer img {
   font-size: 1.3rem;
   font-variant: small-caps;
 }
-.homepage .section1_home .section1_home_arrow {
+@media screen and (min-width: 780px) {
+  .homepage .section1_home .section1_home_text h2 {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .homepage .section1_home .section1_home_text h2 {
+    font-size: 2rem;
+  }
+}
+.homepage .section1_home_arrow {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -170,7 +247,7 @@ footer img {
   justify-content: flex-end;
   height: 40%;
 }
-.homepage .section1_home .section1_home_arrow a img {
+.homepage .section1_home_arrow a img {
   margin-bottom: 5px;
   width: 30px;
   height: 30px;
@@ -190,7 +267,7 @@ footer img {
   justify-content: center;
   margin-bottom: 25px;
 }
-.homepage .carousel {
+.homepage .section3_home .carousel {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -199,14 +276,27 @@ footer img {
   width: 100vw;
   height: 250px;
 }
-.homepage .carousel .carousel-inner, .homepage .carousel .carousel-inner div img {
+.homepage .section3_home .carousel .carousel-inner, .homepage .section3_home .carousel .carousel-inner div img {
   width: 240px;
   height: 210px;
 }
-.homepage .carousel .carousel-inner div img {
+.homepage .section3_home .carousel .carousel-inner div img {
   border-style: double;
   border-width: 4px;
   border-radius: 30px;
+}
+@media screen and (min-width: 780px) {
+  .homepage .section3_home {
+    margin-bottom: 60px;
+  }
+  .homepage .section3_home .carousel {
+    width: 760px;
+    height: 580px;
+  }
+  .homepage .section3_home .carousel .carousel_img, .homepage .section3_home .carousel .carousel-inner, .homepage .section3_home .carousel .carousel-inner div img {
+    width: 560px;
+    height: 530px;
+  }
 }
 
 /*------------------------------------------*/
@@ -218,7 +308,7 @@ footer img {
   justify-content: center;
   margin-top: 25px;
 }
-.mainShop .onSale, .mainShop .onSale .onSale-imgContainer {
+.mainShop .onSale_container .onSale, .mainShop .onSale_container .onSale .onSale-imgContainer {
   margin: 15px;
   padding: 8px;
   background-color: #dfcbb5;
@@ -226,27 +316,27 @@ footer img {
   border-width: 4px;
   border-radius: 20px;
 }
-.mainShop .onSale .onSale-imgContainer {
+.mainShop .onSale_container .onSale .onSale-imgContainer {
   background-image: url(../images/old-paper2-bg.jpg);
 }
-.mainShop .onSale .onSale-imgContainer img {
+.mainShop .onSale_container .onSale .onSale-imgContainer img {
   width: 240px;
   height: 210px;
 }
-.mainShop .onSale .onSaleDescription {
+.mainShop .onSale_container .onSale .onSaleDescription {
   text-align: center;
   margin: 10px;
 }
-.mainShop .onSale .onSaleDescription .onSaleDescription_text {
+.mainShop .onSale_container .onSale .onSaleDescription .onSaleDescription_text {
   margin: 0;
   font-size: 1.1rem;
 }
-.mainShop .onSale .onSaleDescription .price {
+.mainShop .onSale_container .onSale .onSaleDescription .price {
   margin: 0;
   font-size: 1.5rem;
   font-weight: bolder;
 }
-.mainShop .onSale .onSaleDescription a {
+.mainShop .onSale_container .onSale .onSaleDescription a {
   display: inline-block;
   margin-top: 10px;
   padding: 4px 18px;
@@ -258,6 +348,14 @@ footer img {
   color: #f9ffed;
   font-size: 1.1rem;
   font-weight: bolder;
+}
+@media screen and (min-width: 780px) {
+  .mainShop .onSale_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 /*------------------------------------------*/
@@ -282,6 +380,14 @@ footer img {
   border-style: double;
   border-width: 4px;
   border-radius: 30px;
+}
+@media screen and (min-width: 780px) {
+  .mainGalery .imgGalery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 /*------------------------------------------*/
@@ -338,6 +444,37 @@ footer img {
   max-width: 98%;
 }
 
+@media screen and (min-width: 600px) {
+  .mainAbout {
+    grid-template-areas: "s1 s1" "t1 i1" "t2 i1" "s2 s2" "v1 v1";
+  }
+  .mainAbout div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  .mainAbout {
+    grid-template-areas: "s1 s1 s1" "t1 t1 i1" "t2 t2 i1" "s2 s2 s2" "v1 v1 v1";
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .about_subtitle1, .about_subtitle2 {
+    justify-self: center;
+  }
+  .about_t1, .about_t2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .about_img1 {
+    justify-self: flex-start;
+  }
+  .mainAbout iframe {
+    margin-bottom: 30px;
+  }
+}
 /*------------------------------------------*/
 /*------------------contact-----------------*/
 .mainContact {
@@ -375,6 +512,11 @@ footer img {
 .mainContact .contactForm_container .contactForm .contact_div2 {
   padding: 6px;
 }
+@media screen and (min-width: 780px) {
+  .mainContact .contactForm_container {
+    padding: 60px;
+  }
+}
 
 /*------------------------------------------*/
 .nav-link:hover, .navbar-logo:hover {
@@ -383,7 +525,7 @@ footer img {
   transition: all 0.02s;
 }
 
-.hover_zoom:hover, .divSocial .btn--rsocial:hover {
+.hover_zoom:hover, header .divSocial .btn--rsocial:hover, .header-index .divSocial .btn--rsocial:hover {
   transform: scale(1.075);
 }
 

@@ -13,6 +13,7 @@ body{
   display: grid;
   grid-template-rows: auto 1fr auto;
   background-image: url(../images/old-paper-bg.jpg);
+  background-size: cover;
 }
 
 .td-none{
@@ -30,7 +31,6 @@ body{
   font-weight: 400;
   padding-bottom: 10px;
 }
-
 .textBox{
   max-width: 500px;
   padding: 0 15px 15px 15px;
@@ -38,6 +38,15 @@ body{
   font-weight: 300;
   text-align: center;
   line-height: 26px;
+}
+@media screen and (min-width: 992px){
+  .subtitle{
+    font-size: 2em;
+  }
+  .textBox{
+    font-size: 1.4em;
+    max-width: 800px;
+  }
 }
 
 $redes:(
@@ -52,30 +61,6 @@ $redes:(
   }
 }
 
-.divSocial{
-  @include flex-column-center();
-  align-items: flex-end;
-  margin: 0 10px 10px 0;
-
-  .btn--rsocial{
-    @extend .hover_zoom;
-    display: inline-block;
-    margin: 4px 2px;
-    height: 40px;
-    width: 125px;
-    border: none;
-    color: $font-color-light;
-    text-align: center;
-    font-size: 1rem;
-    border-radius: 6px;
-    cursor: pointer;
-
-    a{
-      color: $font-color-light;
-    }
-  }
-}
-
 /*------------------navbar------------------*/
 header{
   position: sticky;
@@ -85,6 +70,35 @@ header{
   background-image: url(../images/nav-bg.jpg);
   background-size: contain;
   z-index: 2;
+
+  .offcanvas-body{
+    overflow-y: visible;
+  }
+
+  .divSocial{
+    @include flex-column-center();
+    align-self: flex-end;
+    margin: 0 10px 10px 0;
+    max-width: fit-content;
+  
+    .btn--rsocial{
+      @extend .hover_zoom;
+      display: inline-block;
+      margin: 4px 2px;
+      height: 40px;
+      width: 125px;
+      border: none;
+      color: $font-color-light;
+      text-align: center;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+  
+      a{
+        color: $font-color-light;
+      }
+    }
+  }
 }
 
 .header-index{
@@ -102,6 +116,37 @@ header{
   color: $font-color-light;
   font-size: 3.5rem;
   font-family: 'Great Vibes', cursive;
+}
+
+.logo_desktop{
+  display: none;
+}
+
+@media screen and (min-width: 992px){
+  header{
+    padding: 0%;
+
+    .logo_mobile, .divSocial{
+      display: none;
+    }
+    .navbar-logo{
+      font-size: 4rem;
+    }
+    .nav-link{
+      font-size: 1.5rem;
+    }
+    .container-fluid, .navbar{
+      width: 100%;
+    }
+    .navbar-nav{
+      margin: 0 15px;
+      justify-content: space-between !important;
+      align-items: flex-end !important;
+      .logo_desktop{
+        display: flex;
+      }
+    }
+  }
 }
 /*------------------------------------------*/
 
@@ -145,6 +190,36 @@ footer{
   @extend .footerText;
   div {
     margin: 0 8px;
+  }
+}
+@media screen and (min-width: 780px){
+  footer{
+    grid-template-areas: 
+      "fTop  fSocial"
+      "fText  fText";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+
+    img{
+      width: 40px;
+      height: 40px;
+    }
+  
+    .footerSocial{
+      justify-content: flex-end;
+      margin: 10px;
+    }
+  
+    .footerSocial div{
+      margin: 0 20px;
+    }
+  
+  
+    .footerTop{
+      position: absolute;
+      justify-self: center;
+      margin-top: 10px;
+    }
   }
 }
 /*------------------------------------------*/
