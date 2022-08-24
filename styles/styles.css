@@ -374,19 +374,20 @@ footer img {
   justify-content: center;
 }
 .mainGalery .imgGalery .product_img {
-  width: 240px;
-  height: 210px;
   margin: 10px;
   border-style: double;
   border-width: 4px;
   border-radius: 30px;
 }
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 992px) {
   .mainGalery .imgGalery {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  .mainGalery picture img {
+    max-width: 680px;
   }
 }
 
