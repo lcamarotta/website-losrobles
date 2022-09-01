@@ -276,29 +276,16 @@
 
   .contactForm_container{
     @include flex-column-center;
-    margin: 5px;
-    padding: 10px;
+    max-width: 950px;
+    margin: 20px 0;
+    padding: 1.5rem;
     border-radius: 30px;
     color: $font-color-dark;
-    background-color: $color-2;
-
-    .contactForm{
-      font-size: 1.2rem;
-      text-align: center;
-
-      .contact_div1{
-        @include flex-column-center;
-        align-items: initial;
-        padding: 4px;
-      }
-      .contact_div2{
-        padding: 6px;
-      }
-    }
+    background-color: $color-1;
   }
   @media screen and (min-width: 780px){
     .contactForm_container{
-      padding: 60px;
+      padding: 2.5rem;
     }
   }
 }

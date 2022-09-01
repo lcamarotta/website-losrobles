@@ -12,6 +12,17 @@
   transform: scale(1.075) rotate(180deg);
 }
 
+.btn-custom-1:hover {
+  color: $font-color-light;
+  background-color: $color-5;
+  border: $color-5;
+}
+
+.form-check-input:checked{
+  background-color: $color-4;
+  border: $color-4;
+}
+
 .section1_home_text {
   h2, p {
     animation: title-zoom 1.5s;

@@ -16,6 +16,16 @@ body{
   background-size: cover;
 }
 
+.flex-col-center{
+  @include flex-column-center;
+}
+
+.btn-custom-1{
+  color: $font-color-light;
+  background-color: $color-4;
+  border: $color-4;
+}
+
 .td-none{
   text-decoration: none;
 }
@@ -114,12 +124,18 @@ header{
 .navbar-logo{
   margin: 0;
   color: $font-color-light;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-family: 'Great Vibes', cursive;
 }
 
 .logo_desktop{
   display: none;
+}
+
+@media screen and (min-width: 335px){
+  .navbar-logo{
+    font-size: 3.5rem;
+  }
 }
 
 @media screen and (min-width: 992px){
@@ -130,12 +146,12 @@ header{
       display: none;
     }
     .navbar-logo{
-      font-size: 4rem;
+      font-size: 4.5rem;
     }
     .nav-link{
       font-size: 1.5rem;
     }
-    .container-fluid, .navbar{
+    .navbar{
       width: 100%;
     }
     .navbar-nav{
