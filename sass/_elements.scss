@@ -10,18 +10,17 @@
       @include flex-column-center();
       justify-content: flex-end;
       height: 60%;
-      h2, p{
+      p{
         color: $font-color-light;
         font-size: 1.3rem;
         font-variant: small-caps;
       }
-      @media screen and (min-width: 780px){
-        h2{
+      h2{
+        @extend p;
+        @media screen and (min-width: 780px){
         font-size: 1.6rem;
         }
-      }
-      @media screen and (min-width: 992px){
-        h2{
+        @media screen and (min-width: 992px){
         font-size: 2rem;
         }
       }
@@ -132,9 +131,7 @@
         }
       }
     }
-  }
-  @media screen and (min-width: 780px){
-    .onSale_container{
+    @media screen and (min-width: 780px){
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -148,27 +145,31 @@
 
 .mainGalery{
   @include flex-column-center;
-  margin-top: 25px;
-
+  margin-top: 60px;
   .imgGalery{
     @include flex-column-center;
-    .product_img{
-      margin: 10px;
-      border-style: double;
-      border-width: 4px;
-      border-radius: 30px;
+    width: 90%;
+    picture{
+      @extend .imgGalery;
+      .product_img{
+        @extend .imgGalery;
+        margin: 10px 0;
+        border-style: double;
+        border-width: 6px;
+        border-radius: 30px;
+      }
     }
-  }
-  @media screen and (min-width: 992px) {
-    .imgGalery{
+    @media screen and (min-width: 577px) {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
-    }
-    picture{
-      img{
-      max-width: 680px;
+      width: auto;
+      picture{
+        margin: 20px;
+        img{
+        max-width: 580px;
+        }
       }
     }
   }
@@ -241,9 +242,7 @@
     border-radius: 30px;
     color: $font-color-dark;
     background-color: $color-1;
-  }
-  @media screen and (min-width: 780px){
-    .contactForm_container{
+    @media screen and (min-width: 780px){
       padding: 2.5rem;
     }
   }

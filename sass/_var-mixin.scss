@@ -16,3 +16,14 @@ $font-color-special: #f7fcd1;
   align-items: center;
   justify-content: center;
 }
+
+$redes:(
+  whatsapp: #25D366,
+  facebook: #4267B2,
+  instagram: #E1306C
+);
+@each $red, $color in $redes {
+  .btn--#{$red}{
+    background-color: $color;
+  }
+}

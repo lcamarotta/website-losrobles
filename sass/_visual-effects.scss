@@ -8,6 +8,10 @@
   transform: scale(1.075)
 }
 
+.imgGalery .hover_zoom:hover{
+  transform: scale(1.025);
+}
+
 .rotate180:hover {
   transform: scale(1.075) rotate(180deg);
 }

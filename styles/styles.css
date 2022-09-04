@@ -1,3 +1,15 @@
+.btn--whatsapp {
+  background-color: #25D366;
+}
+
+.btn--facebook {
+  background-color: #4267B2;
+}
+
+.btn--instagram {
+  background-color: #E1306C;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -22,26 +34,19 @@ body {
   justify-content: center;
 }
 
-.btn-custom-1 {
-  color: #f9ffed;
-  background-color: #596E79;
-  border: #596E79;
-}
-
 .td-none {
   text-decoration: none;
-}
-
-.rotate180 {
-  width: 25px;
-  height: 25px;
-  transform: rotate(180deg);
 }
 
 .subtitle {
   font-size: 1.6rem;
   font-weight: 400;
   padding-bottom: 10px;
+}
+@media screen and (min-width: 992px) {
+  .subtitle {
+    font-size: 2em;
+  }
 }
 
 .textBox {
@@ -52,30 +57,27 @@ body {
   text-align: center;
   line-height: 26px;
 }
-
 @media screen and (min-width: 992px) {
-  .subtitle {
-    font-size: 2em;
-  }
   .textBox {
     font-size: 1.4em;
     max-width: 800px;
   }
 }
-.btn--whatsapp {
-  background-color: #25D366;
+
+.btn-custom-1 {
+  color: #f9ffed;
+  background-color: #596E79;
+  border: #596E79;
 }
 
-.btn--facebook {
-  background-color: #4267B2;
-}
-
-.btn--instagram {
-  background-color: #E1306C;
+.rotate180 {
+  width: 25px;
+  height: 25px;
+  transform: rotate(180deg);
 }
 
 /*------------------navbar------------------*/
-header, .header-index {
+.header, .header-index {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -85,10 +87,57 @@ header, .header-index {
   background-size: contain;
   z-index: 2;
 }
-header .offcanvas-body, .header-index .offcanvas-body {
+@media screen and (min-width: 992px) {
+  .header, .header-index {
+    padding: 0%;
+  }
+}
+.header .navbar-logo, .header-index .navbar-logo {
+  margin: 0;
+  color: #f9ffed;
+  font-size: 2.5rem;
+  font-family: "Great Vibes", cursive;
+}
+@media screen and (min-width: 340px) {
+  .header .navbar-logo, .header-index .navbar-logo {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .header .navbar-logo, .header-index .navbar-logo {
+    font-size: 4.5rem;
+  }
+}
+.header .nav-link, .header-index .nav-link {
+  color: #f9ffed;
+  font-variant: small-caps;
+}
+@media screen and (min-width: 992px) {
+  .header .nav-link, .header-index .nav-link {
+    font-size: 1.5rem;
+  }
+}
+.header .logo_mobile, .header-index .logo_mobile {
+  display: none;
+}
+@media screen and (min-width: 340px) {
+  .header .logo_mobile, .header-index .logo_mobile {
+    display: initial;
+    font-size: 3.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .header .logo_mobile, .header-index .logo_mobile {
+    display: none;
+  }
+}
+.header .logo_desktop, .header-index .logo_desktop {
+  display: none;
+}
+.header .offcanvas-body, .header-index .offcanvas-body {
   overflow-y: visible;
 }
-header .divSocial, .header-index .divSocial {
+.header .divSocial, .header-index .divSocial {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -99,7 +148,7 @@ header .divSocial, .header-index .divSocial {
   max-width: -moz-fit-content;
   max-width: fit-content;
 }
-header .divSocial .btn--rsocial, .header-index .divSocial .btn--rsocial {
+.header .divSocial .btn--rsocial, .header-index .divSocial .btn--rsocial {
   display: inline-block;
   margin: 4px 2px;
   height: 40px;
@@ -111,60 +160,32 @@ header .divSocial .btn--rsocial, .header-index .divSocial .btn--rsocial {
   border-radius: 6px;
   cursor: pointer;
 }
-header .divSocial .btn--rsocial a, .header-index .divSocial .btn--rsocial a {
+.header .divSocial .btn--rsocial a, .header-index .divSocial .btn--rsocial a {
   color: #f9ffed;
+}
+@media screen and (min-width: 992px) {
+  .header .divSocial, .header-index .divSocial {
+    display: none;
+  }
 }
 
 .header-index {
   position: fixed;
 }
 
-.nav-link {
-  color: #f9ffed;
-  font-variant: small-caps;
-}
-
-.navbar-logo {
-  margin: 0;
-  color: #f9ffed;
-  font-size: 2.5rem;
-  font-family: "Great Vibes", cursive;
-}
-
-.logo_desktop {
-  display: none;
-}
-
-@media screen and (min-width: 335px) {
-  .navbar-logo {
-    font-size: 3.5rem;
-  }
-}
 @media screen and (min-width: 992px) {
-  header, .header-index {
-    padding: 0%;
-  }
-  header .logo_mobile, .header-index .logo_mobile, header .divSocial, .header-index .divSocial {
-    display: none;
-  }
-  header .navbar-logo, .header-index .navbar-logo {
-    font-size: 4.5rem;
-  }
-  header .nav-link, .header-index .nav-link {
-    font-size: 1.5rem;
-  }
-  header .navbar, .header-index .navbar {
+  .navbar {
     width: 100%;
   }
-  header .navbar-nav, .header-index .navbar-nav {
+  .navbar-nav {
     margin: 0 15px;
     justify-content: space-between !important;
     align-items: flex-end !important;
   }
-  header .navbar-nav .logo_desktop, .header-index .navbar-nav .logo_desktop {
+  .navbar-nav .logo_desktop {
     display: flex;
   }
-  header .navbar-nav .logo_desktop .navbar-brand, .header-index .navbar-nav .logo_desktop .navbar-brand {
+  .navbar-nav .logo_desktop .navbar-brand {
     margin: 0;
   }
 }
@@ -201,6 +222,9 @@ footer img {
   justify-content: center;
 }
 
+.footerSocial {
+  flex-wrap: wrap;
+}
 .footerSocial div {
   margin: 0 8px;
 }
@@ -221,7 +245,7 @@ footer img {
   footer .footerSocial div {
     margin: 0 20px;
   }
-  footer .footerText p, footer .footerSocial p {
+  footer .footerText p, footer .footerText .homepage .section1_home .section1_home_text h2, .homepage .section1_home .section1_home_text footer .footerText h2, footer .footerSocial p, footer .footerSocial .homepage .section1_home .section1_home_text h2, .homepage .section1_home .section1_home_text footer .footerSocial h2 {
     margin: 0;
   }
   footer .footerTop {
@@ -246,7 +270,7 @@ footer img {
   justify-content: flex-end;
   height: 60%;
 }
-.homepage .section1_home .section1_home_text h2, .homepage .section1_home .section1_home_text p {
+.homepage .section1_home .section1_home_text p, .homepage .section1_home .section1_home_text h2 {
   color: #f9ffed;
   font-size: 1.3rem;
   font-variant: small-caps;
@@ -387,29 +411,34 @@ footer img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 25px;
+  margin-top: 60px;
 }
-.mainGalery .imgGalery {
+.mainGalery .imgGalery, .mainGalery .imgGalery picture .product_img, .mainGalery .imgGalery picture .product_img picture, .mainGalery .imgGalery picture {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 90%;
 }
-.mainGalery .imgGalery .product_img {
-  margin: 10px;
+.mainGalery .imgGalery picture .product_img {
+  margin: 10px 0;
   border-style: double;
-  border-width: 4px;
+  border-width: 6px;
   border-radius: 30px;
 }
-@media screen and (min-width: 992px) {
-  .mainGalery .imgGalery {
+@media screen and (min-width: 577px) {
+  .mainGalery .imgGalery, .mainGalery .imgGalery picture .product_img, .mainGalery .imgGalery picture .product_img picture, .mainGalery .imgGalery picture {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    width: auto;
   }
-  .mainGalery picture img {
-    max-width: 680px;
+  .mainGalery .imgGalery picture, .mainGalery .imgGalery picture .product_img picture {
+    margin: 20px;
+  }
+  .mainGalery .imgGalery picture img, .mainGalery .imgGalery picture .product_img picture img {
+    max-width: 580px;
   }
 }
 
@@ -501,8 +530,12 @@ footer img {
   transition: all 0.02s;
 }
 
-.hover_zoom:hover, header .divSocial .btn--rsocial:hover, .header-index .divSocial .btn--rsocial:hover {
+.hover_zoom:hover, .header .divSocial .btn--rsocial:hover, .header-index .divSocial .btn--rsocial:hover {
   transform: scale(1.075);
+}
+
+.imgGalery .hover_zoom:hover, .imgGalery .header .divSocial .btn--rsocial:hover, .header .divSocial .imgGalery .btn--rsocial:hover, .imgGalery .header-index .divSocial .btn--rsocial:hover, .header-index .divSocial .imgGalery .btn--rsocial:hover {
+  transform: scale(1.025);
 }
 
 .rotate180:hover {
@@ -520,7 +553,7 @@ footer img {
   border: #596E79;
 }
 
-.section1_home_text h2, .section1_home_text p {
+.section1_home_text h2, .section1_home_text p, .homepage .section1_home .section1_home_text h2 {
   -webkit-animation: title-zoom 1.5s;
           animation: title-zoom 1.5s;
 }
