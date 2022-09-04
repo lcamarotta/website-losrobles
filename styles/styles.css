@@ -39,13 +39,13 @@ body {
 }
 
 .subtitle {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 400;
   padding-bottom: 10px;
 }
 @media screen and (min-width: 992px) {
   .subtitle {
-    font-size: 2em;
+    font-size: 2.2rem;
   }
 }
 
@@ -352,51 +352,93 @@ footer img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 25px;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../images/photos/img_17.jpg);
+  background-position: bottom;
+  background-size: cover;
+}
+.mainShop .subtitle {
+  margin-top: 30px;
+  color: #f9ffed;
+}
+@media screen and (min-width: 780px) {
+  .mainShop .subtitle {
+    margin-top: 60px;
+  }
+}
+.mainShop .onSale_container, .mainShop .onSale_container .onSale, .mainShop .onSale_container .onSale .onSale-imgContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .mainShop .onSale_container .onSale, .mainShop .onSale_container .onSale .onSale-imgContainer {
-  margin: 15px;
-  padding: 8px;
-  background-color: #dfcbb5;
+  margin: 10px;
+  padding: 4px;
+  max-width: 85%;
+  background-color: #f7e9d8;
   border-style: double;
   border-width: 4px;
   border-radius: 20px;
 }
 .mainShop .onSale_container .onSale .onSale-imgContainer {
   background-image: url(../images/old-paper2-bg.jpg);
+  background-size: contain;
 }
 .mainShop .onSale_container .onSale .onSale-imgContainer img {
-  width: 240px;
-  height: 210px;
+  max-width: 90%;
+}
+@media screen and (min-width: 380px) {
+  .mainShop .onSale_container .onSale .onSale-imgContainer img {
+    width: 290px;
+  }
 }
 .mainShop .onSale_container .onSale .onSaleDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 280px;
   text-align: center;
-  margin: 10px;
+  margin: 5px;
 }
 .mainShop .onSale_container .onSale .onSaleDescription .onSaleDescription_text {
   margin: 0;
   font-size: 1.1rem;
+}
+@media screen and (min-width: 780px) {
+  .mainShop .onSale_container .onSale .onSaleDescription .onSaleDescription_text {
+    margin-top: 50px;
+  }
 }
 .mainShop .onSale_container .onSale .onSaleDescription .price {
   margin: 0;
   font-size: 1.5rem;
   font-weight: bolder;
 }
+@media screen and (min-width: 780px) {
+  .mainShop .onSale_container .onSale .onSaleDescription .price {
+    margin-top: 40px;
+  }
+}
 .mainShop .onSale_container .onSale .onSaleDescription a {
-  display: inline-block;
   margin-top: 10px;
-  padding: 4px 18px;
+  padding: 2px 9px;
   border-color: #596E79;
-  border-width: 6px;
+  border-width: 3px;
   border-style: outset;
   border-radius: 12px;
-  background-color: #3f4e4f;
+  background-color: #596E79;
   color: #f9ffed;
   font-size: 1.1rem;
   font-weight: bolder;
 }
 @media screen and (min-width: 780px) {
-  .mainShop .onSale_container {
+  .mainShop .onSale_container .onSale .onSaleDescription a {
+    padding: 4px 18px;
+  }
+}
+@media screen and (min-width: 780px) {
+  .mainShop .onSale_container, .mainShop .onSale_container .onSale, .mainShop .onSale_container .onSale .onSale-imgContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

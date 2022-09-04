@@ -12,8 +12,6 @@ body{
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  // background-image: url(../images/old-paper-bg.jpg);
-  // background-size: cover;
   background-color: $color-1;
 }
 
@@ -26,11 +24,11 @@ body{
 }
 
 .subtitle{
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 400;
   padding-bottom: 10px;
   @media screen and (min-width: 992px){
-    font-size: 2em;
+    font-size: 2.2rem;
   }
 }
 
