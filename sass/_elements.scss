@@ -178,91 +178,50 @@
 
 /*------------------about-------------------*/
 .mainAbout{
-  .about_subtitle1  { grid-area: s1; }
-  .about_subtitle2  { grid-area: s2; }
-  .about_t1         { grid-area: t1; }
-  .about_t2         { grid-area: t2; }
-  .about_img1       { grid-area: i1; }
-  .about_video1     { grid-area: v1; }
-  
-  display: grid;
-  margin: 25px 5px 0 5px;
-  grid-template-areas: 
-    "s1 s1"
-    "t1 t1"
-    "t2 t2"
-    "i1 i1"
-    "s2 s2"
-    "v1 v1";
-  grid-template-columns: 1fr 1fr;
-
-  div p{
-    text-align: justify;
-  }
-  .about_img1{
-    @include flex-column-center;
-    img{
-      margin: 10px;
-      height: 240px;
-    }
-  }
-
-  .about_subtitle2{
-    margin-top: 25px;
-  }
-
-  .about_video1{
-    @include flex-column-center;
-    iframe{
-      margin-top: 10px;
-      margin-bottom: 15px;
-      max-width: 98%;
-    }
-  }
-}
-
-@media screen and (min-width: 600px){
-  .mainAbout{
-    grid-template-areas: 
-      "s1 s1"
-      "t1 i1"
-      "t2 i1"
-      "s2 s2"
-      "v1 v1";
-
-      div{
-        @include flex-column-center;
-      }
-  }
-}
-@media screen and (min-width: 992px){
-
-  .mainAbout{
-    grid-template-areas: 
-      "s1 s1 s1"
-      "t1 t1 i1"
-      "t2 t2 i1"
-      "s2 s2 s2"
-      "v1 v1 v1";
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .about_subtitle1, .about_subtitle2{
-    justify-self: center;
-  }
-
-  .about_t1, .about_t2{
+  .row-1{
+    max-width: 100%;
+    margin-top: 80px;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
+    justify-content: center;
 
-  .about_img1{
-    justify-self: flex-start;
+    .about_imgContainer{
+      @include flex-column-center;
+      img{
+        margin-top: 30px;
+        max-width: 480px;
+      }
+    }
   }
-
-  .mainAbout iframe{
-    margin-bottom: 30px;
+  .row-2{
+    margin: 0;
+    max-width: 100%;
+    div{
+      h3{
+        margin-top: 100px;
+        margin-bottom: 0;
+        padding: 0;
+      }
+    }
+    .about_vidContainer{
+      @include flex-column-center;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      
+      @media screen and (max-width: 360px){
+        .instagram-media{
+          min-width: 100% !important;
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        .instagram-media{
+          margin: 10px 20px 30px 0 !important;
+        }
+      }
+    }
   }
 }
 /*------------------------------------------*/

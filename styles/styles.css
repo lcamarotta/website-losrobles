@@ -12,8 +12,7 @@ body {
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  background-image: url(../images/old-paper-bg.jpg);
-  background-size: cover;
+  background-color: #F0ECE3;
 }
 
 .flex-col-center {
@@ -165,6 +164,9 @@ header .divSocial .btn--rsocial a, .header-index .divSocial .btn--rsocial a {
   header .navbar-nav .logo_desktop, .header-index .navbar-nav .logo_desktop {
     display: flex;
   }
+  header .navbar-nav .logo_desktop .navbar-brand, .header-index .navbar-nav .logo_desktop .navbar-brand {
+    margin: 0;
+  }
 }
 /*------------------------------------------*/
 /*------------------footer------------------*/
@@ -206,7 +208,6 @@ footer img {
 @media screen and (min-width: 780px) {
   footer {
     grid-template-areas: "fTop  fSocial" "fText  fText";
-    grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr 1fr;
   }
   footer img {
@@ -220,10 +221,13 @@ footer img {
   footer .footerSocial div {
     margin: 0 20px;
   }
+  footer .footerText p, footer .footerSocial p {
+    margin: 0;
+  }
   footer .footerTop {
     position: absolute;
     justify-self: center;
-    margin-top: 10px;
+    margin-top: 15px;
   }
 }
 /*------------------------------------------*/
@@ -411,89 +415,56 @@ footer img {
 
 /*------------------------------------------*/
 /*------------------about-------------------*/
-.mainAbout {
-  display: grid;
-  margin: 25px 5px 0 5px;
-  grid-template-areas: "s1 s1" "t1 t1" "t2 t2" "i1 i1" "s2 s2" "v1 v1";
-  grid-template-columns: 1fr 1fr;
+.mainAbout .row-1 {
+  max-width: 100%;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
 }
-.mainAbout .about_subtitle1 {
-  grid-area: s1;
-}
-.mainAbout .about_subtitle2 {
-  grid-area: s2;
-}
-.mainAbout .about_t1 {
-  grid-area: t1;
-}
-.mainAbout .about_t2 {
-  grid-area: t2;
-}
-.mainAbout .about_img1 {
-  grid-area: i1;
-}
-.mainAbout .about_video1 {
-  grid-area: v1;
-}
-.mainAbout div p {
-  text-align: justify;
-}
-.mainAbout .about_img1 {
+.mainAbout .row-1 .about_imgContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.mainAbout .about_img1 img {
-  margin: 10px;
-  height: 240px;
+.mainAbout .row-1 .about_imgContainer img {
+  margin-top: 30px;
+  max-width: 480px;
 }
-.mainAbout .about_subtitle2 {
-  margin-top: 25px;
+.mainAbout .row-2 {
+  margin: 0;
+  max-width: 100%;
 }
-.mainAbout .about_video1 {
+.mainAbout .row-2 div h3 {
+  margin-top: 100px;
+  margin-bottom: 0;
+  padding: 0;
+}
+.mainAbout .row-2 .about_vidContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
 }
-.mainAbout .about_video1 iframe {
-  margin-top: 10px;
-  margin-bottom: 15px;
-  max-width: 98%;
+@media screen and (max-width: 360px) {
+  .mainAbout .row-2 .about_vidContainer .instagram-media {
+    min-width: 100% !important;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mainAbout .row-2 .about_vidContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .mainAbout .row-2 .about_vidContainer .instagram-media {
+    margin: 10px 20px 30px 0 !important;
+  }
 }
 
-@media screen and (min-width: 600px) {
-  .mainAbout {
-    grid-template-areas: "s1 s1" "t1 i1" "t2 i1" "s2 s2" "v1 v1";
-  }
-  .mainAbout div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-}
-@media screen and (min-width: 992px) {
-  .mainAbout {
-    grid-template-areas: "s1 s1 s1" "t1 t1 i1" "t2 t2 i1" "s2 s2 s2" "v1 v1 v1";
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  .about_subtitle1, .about_subtitle2 {
-    justify-self: center;
-  }
-  .about_t1, .about_t2 {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  .about_img1 {
-    justify-self: flex-start;
-  }
-  .mainAbout iframe {
-    margin-bottom: 30px;
-  }
-}
 /*------------------------------------------*/
 /*------------------contact-----------------*/
 .mainContact {
